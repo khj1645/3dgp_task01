@@ -27,8 +27,8 @@
 using namespace DirectX;
 using namespace DirectX::PackedVector;
 
-#define FRAMEBUFFER_WIDTH		640
-#define FRAMEBUFFER_HEIGHT		480
+#define FRAMEBUFFER_WIDTH		1600
+#define FRAMEBUFFER_HEIGHT		800
 
 #define DIR_FORWARD				0x01
 #define DIR_BACKWARD			0x02

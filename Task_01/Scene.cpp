@@ -294,7 +294,7 @@ void CScene::CheckObjectByWallCollisions()
 			break;
 		}
 	}
-}
+}	
 
 void CScene::CheckPlayerByWallCollision()
 {

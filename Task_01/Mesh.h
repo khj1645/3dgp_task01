@@ -1,5 +1,5 @@
 #pragma once
-
+#include <vector>
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 class CVertex
@@ -17,10 +17,11 @@ class CPolygon
 public:
 	CPolygon() { }
 	CPolygon(int nVertices);
-	~CPolygon();
+	~CPolygon() = default;
 
 	int							m_nVertices = 0;
-	CVertex						*m_pVertices = NULL;
+	//CVertex						*m_pVertices = NULL;
+	std::vector<CVertex> m_pVertices;
 
 	void SetVertex(int nIndex, CVertex& vertex);
 };
@@ -32,7 +33,7 @@ class CMesh
 public:
 	CMesh() { }
 	CMesh(int nPolygons);
-	virtual ~CMesh();
+	virtual ~CMesh() = default;
 
 private:
 	int							m_nReferences = 1;
@@ -43,13 +44,14 @@ public:
 
 protected:
 	int							m_nPolygons = 0;
-	CPolygon					**m_ppPolygons = NULL;
+	//CPolygon					**m_ppPolygons = NULL;
+	std::vector<CPolygon> m_ppPolygons;
 
 public:
 	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
 
 public:
-	void SetPolygon(int nIndex, CPolygon *pPolygon);
+	void SetPolygon(int nIndex, CPolygon &pPolygon);
 
 	virtual void Render(HDC hDCFrameBuffer);
 

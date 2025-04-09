@@ -1,16 +1,7 @@
-﻿  Camera.cpp
-  GameFramework.cpp
-  GameObject.cpp
-  GraphicsPipeline.cpp
-  Mesh.cpp
-  Player.cpp
-  Scene.cpp
-  stdafx.cpp
-  Task_01.cpp
-  Timer.cpp
+﻿  Mesh.cpp
   코드를 생성하고 있습니다.
-  329 of 332 functions (99.1%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  0 of 481 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Task_01.vcxproj -> C:\3dgp_task01\Task_01\x64\Release\Task_01.exe
