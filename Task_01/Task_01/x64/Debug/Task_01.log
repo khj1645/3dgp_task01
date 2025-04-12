@@ -1,0 +1,1611 @@
+﻿  Camera.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Camera.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Camera.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Camera.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(27,25): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(27,56):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Camera.cpp(27,25):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(28,22): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(28,53):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Camera.cpp(28,22):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(51,25): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(51,43):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Camera.cpp(51,25):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(52,22): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(52,40):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Camera.cpp(52,22):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(53,24): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(53,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Camera.cpp(53,24):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Camera.cpp(103,2): error C2665: 'CCamera::Move': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(96,15):
+      'void CCamera::Move(DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\Camera.cpp(103,2):
+          'void CCamera::Move(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Camera.cpp(103,15):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Camera.cpp(103,2):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+  GameFramework.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameFramework.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameFramework.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameFramework.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\GameFramework.cpp(80,11): error C2664: 'void CPlayer::SetCameraOffset(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\GameFramework.cpp(80,37):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Player.h(41,7):
+      'CPlayer::SetCameraOffset' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\GameFramework.cpp(80,11):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+  GameObject.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameObject.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameObject.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GameObject.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\GameObject.cpp(123,37): error C2664: 'DirectX::XMFLOAT4X4 Matrix4x4::LookToLH(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\GameObject.cpp(123,57):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(261,20):
+      'Matrix4x4::LookToLH' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\GameObject.cpp(123,37):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMFLOAT3, DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\GameObject.cpp(131,37): error C2664: 'DirectX::XMFLOAT4X4 Matrix4x4::LookAtLH(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\GameObject.cpp(131,57):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(254,20):
+      'Matrix4x4::LookAtLH' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\GameObject.cpp(131,37):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMFLOAT3, DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\GameObject.cpp(244,41): error C2665: 'Matrix4x4::Multiply': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(212,20):
+      'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMMATRIX &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\GameObject.cpp(244,41):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMMATRIX &)': 인수 1을(를) 'DirectX::XMFLOAT4X4'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(205,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMFLOAT4X4 &)'
+          C:\3dgp_task01\Task_01\GameObject.cpp(244,41):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMFLOAT4X4 &)': 인수 1을(를) 'DirectX::XMFLOAT4X4'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(198,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\GameObject.cpp(244,41):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMMATRIX &)': 인수 1을(를) 'DirectX::XMFLOAT4X4'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\GameObject.cpp(244,73):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(191,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMFLOAT4X4 &)'
+          C:\3dgp_task01\Task_01\GameObject.cpp(244,41):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMFLOAT4X4 &)': 인수 1을(를) 'DirectX::XMFLOAT4X4'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\GameObject.cpp(244,73):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.cpp(244,41):
+      인수 목록 '(DirectX::XMFLOAT4X4, DirectX::XMFLOAT4X4)'을(를) 일치시키는 동안
+  
+  GraphicsPipeline.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GraphicsPipeline.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GraphicsPipeline.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'GraphicsPipeline.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+  Mesh.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Mesh.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Mesh.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Mesh.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(65,17): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\3dgp_task01\Task_01\Mesh.cpp(139,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(139,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(139,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(140,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(140,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(140,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(141,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(141,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(141,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(142,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(142,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(142,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(146,10): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(146,31):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(146,10):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(147,10): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(147,31):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(147,10):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(148,10): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(148,31):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(148,10):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(149,10): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(149,31):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(149,10):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(153,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(153,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(153,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(154,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(154,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(154,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(155,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(155,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(155,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(156,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(156,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(156,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(160,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(160,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(160,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(161,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(161,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(161,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(162,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(162,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(162,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(163,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(163,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(163,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(167,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(167,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(167,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(168,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(168,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(168,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(169,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(169,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(169,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(170,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(170,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(170,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(174,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(174,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(174,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(175,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(175,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(175,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(176,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(176,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(176,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(177,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(177,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(177,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(201,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(201,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(201,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(202,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(202,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(202,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(203,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(203,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(203,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(204,13): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(204,34):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(204,13):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(215,14): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(215,35):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(215,14):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(216,14): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(216,35):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(216,14):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(217,14): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(217,35):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(217,14):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(218,14): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(218,35):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(218,14):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(229,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(229,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(229,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(230,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(230,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(230,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(231,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(231,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(231,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(232,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(232,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(232,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(243,15): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(243,36):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(243,15):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(244,15): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(244,36):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(244,15):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(245,15): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(245,36):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(245,15):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(246,15): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(246,36):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(246,15):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(252,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(252,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(252,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(253,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(253,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(253,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(254,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(254,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(254,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(255,12): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(255,33):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(255,12):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(259,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(259,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(259,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(260,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(260,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(260,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(261,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(261,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(261,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(262,11): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(262,32):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(262,11):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(279,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(279,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(279,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(280,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(280,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(280,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(281,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(281,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(281,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(285,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(285,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(285,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(286,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(286,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(286,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(287,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(287,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(287,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(291,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(291,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(291,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(292,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(292,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(292,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(293,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(293,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(293,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(297,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(297,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(297,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(298,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(298,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(298,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(299,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(299,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(299,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(304,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(304,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(304,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(305,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(305,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(305,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(306,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(306,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(306,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(310,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(310,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(310,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(311,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(311,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(311,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(312,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(312,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(312,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(316,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(316,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(316,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(317,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(317,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(317,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(318,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(318,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(318,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(322,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(322,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(322,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(323,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(323,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(323,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(324,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(324,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(324,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(329,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(329,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(329,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(330,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(330,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(330,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(331,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(331,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(331,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(335,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(335,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(335,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(336,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(336,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(336,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(337,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(337,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(337,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(341,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(341,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(341,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(342,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(342,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(342,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(343,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(343,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(343,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(347,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(347,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(347,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(348,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(348,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(348,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(349,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(349,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(349,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(354,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(354,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(354,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(355,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(355,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(355,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(356,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(356,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(356,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(360,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(360,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(360,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(361,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(361,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(361,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(362,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(362,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(362,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(366,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(366,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(366,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(367,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(367,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(367,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(368,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(368,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(368,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(372,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(372,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(372,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(373,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(373,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(373,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(374,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(374,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(374,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(379,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(379,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(379,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(380,7): error C2664: 'void CPolygon::SetVertex(int,CVertex &)': 인수 2을(를) 'CVertex'에서 'CVertex &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(380,29):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Mesh.cpp(19,16):
+      'CPolygon::SetVertex' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Mesh.cpp(380,7):
+      인수 목록 '(int, CVertex)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Mesh.cpp(380,7): error C1003: 오류 수가 100개를 초과했습니다. 컴파일을 중지합니다.
+  Player.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Player.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Player.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Player.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(25,11): error C2665: 'CCamera::SetLookAt': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+      C:\3dgp_task01\Task_01\Camera.h(63,7):
+      'void CCamera::SetLookAt(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\Player.cpp(25,11):
+          'void CCamera::SetLookAt(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Player.cpp(25,35):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(25,11):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMFLOAT3, DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(60,2): error C2665: 'CPlayer::Move': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(45,15):
+      'void CPlayer::Move(DirectX::XMFLOAT3 &,bool)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\Player.cpp(60,2):
+          'void CPlayer::Move(DirectX::XMFLOAT3 &,bool)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Player.cpp(60,15):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(29,15):
+      또는       'void CPlayer::Move(DWORD,float)'
+          C:\3dgp_task01\Task_01\Player.cpp(60,2):
+          'void CPlayer::Move(DWORD,float)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DWORD'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Player.cpp(60,15):
+              이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(60,2):
+      인수 목록 '(DirectX::XMFLOAT3, bool)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(86,25): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(86,56):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(86,25):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(87,22): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(87,53):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(87,22):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(93,25): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(93,43):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(93,25):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(94,22): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(94,40):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(94,22):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(95,24): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(95,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(95,24):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(105,39): error C2664: 'DirectX::XMFLOAT3 Vector3::Normalize(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(105,71):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(108,18):
+      'Vector3::Normalize' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(105,39):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(141,17): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(141,43):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Player.cpp(141,17):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Player.cpp(167,29): error C2665: 'Matrix4x4::Multiply': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(212,20):
+      'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMMATRIX &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\Player.cpp(167,29):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMMATRIX &)': 인수 1을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Player.cpp(167,66):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(205,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMFLOAT4X4 &)'
+          C:\3dgp_task01\Task_01\Player.cpp(167,29):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMMATRIX &,DirectX::XMFLOAT4X4 &)': 인수 1을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\Player.cpp(167,66):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(198,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\Player.cpp(167,29):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMMATRIX &)': 인수 1을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(191,20):
+      또는       'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMFLOAT4X4 &)'
+          C:\3dgp_task01\Task_01\Player.cpp(167,29):
+          'DirectX::XMFLOAT4X4 Matrix4x4::Multiply(DirectX::XMFLOAT4X4 &,DirectX::XMFLOAT4X4 &)': 인수 1을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Player.cpp(167,29):
+      인수 목록 '(DirectX::XMMATRIX, DirectX::XMFLOAT4X4)'을(를) 일치시키는 동안
+  
+  Scene.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Scene.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Scene.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Scene.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(42,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(42,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(42,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(44,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(44,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(44,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(51,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(51,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(51,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(53,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(53,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(53,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(60,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(60,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(60,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(62,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(62,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(62,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(69,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(69,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(69,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(71,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(71,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(71,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(78,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(78,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(78,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(80,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(80,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(80,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(87,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(87,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(87,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(89,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(89,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(89,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(96,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(96,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(96,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(98,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(98,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(98,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(105,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(105,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(105,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(107,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(107,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(107,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(114,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(114,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(114,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(116,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(116,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(116,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(123,16): error C2664: 'void CGameObject::SetRotationAxis(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(123,42):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(45,7):
+      'CGameObject::SetRotationAxis' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(123,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\Scene.cpp(125,16): error C2664: 'void CGameObject::SetMovingDirection(DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMFLOAT3'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\Scene.cpp(125,45):
+      비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\GameObject.h(41,7):
+      'CGameObject::SetMovingDirection' 선언을 참조하십시오.
+      C:\3dgp_task01\Task_01\Scene.cpp(125,16):
+      인수 목록 '(DirectX::XMFLOAT3)'을(를) 일치시키는 동안
+  
+  stdafx.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'stdafx.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'stdafx.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'stdafx.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+  Task_01.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Task_01.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Task_01.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Task_01.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+  Timer.cpp
+C:\3dgp_task01\Task_01\stdafx.h(137,10): error C2665: 'Vector3::Angle': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Timer.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(135,15):
+      'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMFLOAT3 &,DirectX::XMFLOAT3 &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMFLOAT3 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(129,15):
+      또는       'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)'
+          C:\3dgp_task01\Task_01\stdafx.h(137,10):
+          'float Vector3::Angle(DirectX::XMVECTOR &,DirectX::XMVECTOR &)': 인수 1을(를) 'DirectX::XMVECTOR'에서 'DirectX::XMVECTOR &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(137,34):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(137,10):
+      인수 목록 '(DirectX::XMVECTOR, DirectX::XMVECTOR)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(149,10): error C2665: 'Vector3::TransformNormal': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Timer.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(147,18):
+      'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(140,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(149,10):
+          'DirectX::XMFLOAT3 Vector3::TransformNormal(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(149,52):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(149,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+C:\3dgp_task01\Task_01\stdafx.h(161,10): error C2665: 'Vector3::TransformCoord': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  (소스 파일 'Timer.cpp'을(를) 컴파일하는 중)
+      C:\3dgp_task01\Task_01\stdafx.h(159,18):
+      'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)'일 수 있습니다.
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMFLOAT4X4 &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMFLOAT4X4 &'(으)로 변환할 수 없습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(152,18):
+      또는       'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)'
+          C:\3dgp_task01\Task_01\stdafx.h(161,10):
+          'DirectX::XMFLOAT3 Vector3::TransformCoord(DirectX::XMFLOAT3 &,DirectX::XMMATRIX &)': 인수 2을(를) 'DirectX::XMMATRIX'에서 'DirectX::XMMATRIX &'(으)로 변환할 수 없습니다.
+              C:\3dgp_task01\Task_01\stdafx.h(161,51):
+              비const 참조는 lvalue에만 바인딩할 수 있습니다.
+      C:\3dgp_task01\Task_01\stdafx.h(161,10):
+      인수 목록 '(DirectX::XMFLOAT3, DirectX::XMMATRIX)'을(를) 일치시키는 동안
+  
+  코드를 생성하고 있습니다...

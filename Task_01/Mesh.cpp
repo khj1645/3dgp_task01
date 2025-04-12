@@ -6,8 +6,8 @@
 //
 CPolygon::CPolygon(int nVertices)
 {
-	m_nVertices = nVertices;
-	m_pVertices.resize(m_nVertices);
+	//m_nVertices = nVertices;
+	m_pVertices.resize(nVertices);
 	//m_pVertices = new CVertex[nVertices];
 }
 
@@ -18,7 +18,7 @@ CPolygon::CPolygon(int nVertices)
 
 void CPolygon::SetVertex(int nIndex, CVertex& vertex)
 {
-	if ((0 <= nIndex) && (nIndex < m_nVertices))
+	if ((0 <= nIndex) && (nIndex < m_pVertices.size()))
 	{
 		m_pVertices[nIndex] = vertex;
 	}
@@ -28,9 +28,9 @@ void CPolygon::SetVertex(int nIndex, CVertex& vertex)
 //
 CMesh::CMesh(int nPolygons)
 {
-	m_nPolygons = nPolygons;
+	//m_nPolygons = nPolygons;
 	//m_ppPolygons = new CPolygon*[nPolygons];
-	m_ppPolygons.resize(m_nPolygons);
+	m_ppPolygons.resize(nPolygons);
 }
 
 /*CMesh::~CMesh()
@@ -44,7 +44,7 @@ CMesh::CMesh(int nPolygons)
 
 void CMesh::SetPolygon(int nIndex, CPolygon &pPolygon)
 {
-	if ((0 <= nIndex) && (nIndex < m_nPolygons)) m_ppPolygons[nIndex] = pPolygon;
+	if ((0 <= nIndex) && (nIndex < m_ppPolygons.size())) m_ppPolygons[nIndex] = pPolygon;
 }
 
 void Draw2DLine(HDC hDCFrameBuffer, XMFLOAT3& f3PreviousProject, XMFLOAT3& f3CurrentProject)
@@ -60,9 +60,9 @@ void CMesh::Render(HDC hDCFrameBuffer)
 	XMFLOAT3 f3InitialProject, f3PreviousProject;
 	bool bPreviousInside = false, bInitialInside = false, bCurrentInside = false, bIntersectInside = false;
 
-	for (int j = 0; j < m_nPolygons; j++)
+	for (int j = 0; j < m_ppPolygons.size(); j++)
 	{
-		int nVertices = m_ppPolygons[j].m_nVertices;
+		int nVertices = m_ppPolygons[j].m_pVertices.size();
 		std::vector<CVertex> pVertices = m_ppPolygons[j].m_pVertices;
 
 		f3PreviousProject = f3InitialProject = CGraphicsPipeline::Project(pVertices[0].m_xmf3Position);
@@ -94,9 +94,9 @@ int CMesh::CheckRayIntersection(XMVECTOR& xmvPickRayOrigin, XMVECTOR& xmvPickRay
 	bool bIntersected = m_xmOOBB.Intersects(xmvPickRayOrigin, xmvPickRayDirection, *pfNearHitDistance);
 	if (bIntersected)
 	{
-		for (int i = 0; i < m_nPolygons; i++)
+		for (int i = 0; i < m_ppPolygons.size(); i++)
 		{
-			switch (m_ppPolygons[i].m_nVertices)
+			switch (m_ppPolygons[i].m_pVertices.size())
 			{
 			case 3:
 			{

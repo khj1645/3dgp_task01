@@ -35,7 +35,7 @@ void CScene::BuildObjects()
 	m_nObjects = 10;
 	m_ppObjects = new CGameObject * [m_nObjects];
 
-	m_ppObjects[0] = new CExplosiveObject();
+	m_ppObjects[0] =new CExplosiveObject();
 	m_ppObjects[0]->SetMesh(pCubeMesh);
 	m_ppObjects[0]->SetColor(RGB(255, 0, 0));
 	m_ppObjects[0]->SetPosition(-13.5f, 0.0f, -14.0f);

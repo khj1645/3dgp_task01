@@ -19,7 +19,7 @@ public:
 	CPolygon(int nVertices);
 	~CPolygon() = default;
 
-	int							m_nVertices = 0;
+	//int							m_nVertices = 0;
 	//CVertex						*m_pVertices = NULL;
 	std::vector<CVertex> m_pVertices;
 
@@ -43,7 +43,7 @@ public:
 	void Release() { m_nReferences--; if (m_nReferences <= 0) delete this; }
 
 protected:
-	int							m_nPolygons = 0;
+	//int							m_nPolygons = 0;
 	//CPolygon					**m_ppPolygons = NULL;
 	std::vector<CPolygon> m_ppPolygons;
 

@@ -2,8 +2,10 @@
 // File: CGameFramework.cpp
 //-----------------------------------------------------------------------------
 
+#include <memory>
 #include "stdafx.h"
 #include "GameFramework.h"
+#include "TankScene.h"
 
 void CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 {
@@ -78,25 +80,24 @@ void CGameFramework::BuildObjects()
 	m_pPlayer->SetColor(RGB(0, 0, 255));
 	m_pPlayer->SetCamera(pCamera);
 	m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
-
-	m_pScene = new CScene(m_pPlayer);
-	m_pScene->BuildObjects();
+	auto tankScene = std::make_shared<TankCScene>(m_pPlayer);
+	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
+	m_SceneManager.ChangeScene(baseScene, SceneType::Tank);
+	//m_SceneManager.BuildObjects();
+	//m_pScene = new CScene(m_pPlayer);
+	//m_pScene->BuildObjects();
 }
 
 void CGameFramework::ReleaseObjects()
 {
-	if (m_pScene)
-	{
-		m_pScene->ReleaseObjects();
-		delete m_pScene;
-	}
+	m_SceneManager.ReleaseObjects();
 
 	if (m_pPlayer) delete m_pPlayer;
 }
 
 void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
-	if (m_pScene) m_pScene->OnProcessingMouseMessage(hWnd, nMessageID, wParam, lParam);
+	m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
 
 	switch (nMessageID)
 	{
@@ -104,7 +105,7 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 	case WM_LBUTTONDOWN:
 		::SetCapture(hWnd);
 		::GetCursorPos(&m_ptOldCursorPos);
-		if (nMessageID == WM_RBUTTONDOWN) m_pLockedObject = m_pScene->PickObjectPointedByCursor(LOWORD(lParam), HIWORD(lParam), m_pPlayer->m_pCamera);
+		if (nMessageID == WM_RBUTTONDOWN) m_pLockedObject = m_SceneManager.PickObjectPointedByCursor(LOWORD(lParam), HIWORD(lParam), m_pPlayer->m_pCamera);
 		break;
 	case WM_LBUTTONUP:
 	case WM_RBUTTONUP:
@@ -119,7 +120,7 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 
 void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
-	if (m_pScene) m_pScene->OnProcessingKeyboardMessage(hWnd, nMessageID, wParam, lParam);
+	m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
 
 	switch (nMessageID)
 	{
@@ -136,7 +137,7 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 			m_pLockedObject = NULL;
 			break;
 		default:
-			m_pScene->OnProcessingKeyboardMessage(hWnd, nMessageID, wParam, lParam);
+			m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
 			break;
 		}
 		break;
@@ -214,13 +215,12 @@ void CGameFramework::AnimateObjects()
 {
 	float fTimeElapsed = m_GameTimer.GetTimeElapsed();
 	if (m_pPlayer) m_pPlayer->Animate(fTimeElapsed);
-	if (m_pScene) m_pScene->Animate(fTimeElapsed);
+	m_SceneManager.Update(fTimeElapsed);
 }
 
 void CGameFramework::FrameAdvance()
 {    
 	m_GameTimer.Tick(60.0f);
-
 	ProcessInput();
 
 	AnimateObjects();
@@ -228,7 +228,7 @@ void CGameFramework::FrameAdvance()
     ClearFrameBuffer(RGB(255, 255, 255));
 
 	CCamera* pCamera = m_pPlayer->GetCamera();
-	if (m_pScene) m_pScene->Render(m_hDCFrameBuffer, pCamera);
+	m_SceneManager.Render(m_hDCFrameBuffer, pCamera);
 
 	PresentFrameBuffer();
 
