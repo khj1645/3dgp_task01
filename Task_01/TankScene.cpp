@@ -16,11 +16,17 @@ void TankCScene::BuildObjects()
 	CExplosiveObject::PrepareExplosion();
 
 	float fHalfWidth = 45.0f, fHalfHeight = 45.0f, fHalfDepth = 200.0f;
-	CWallMesh* pWallCubeMesh = new CWallMesh(fHalfWidth * 2.0f, fHalfHeight * 2.0f, fHalfDepth * 2.0f, 30);
+	//CWallMesh* pWallCubeMesh = new CWallMesh(fHalfWidth * 2.0f, fHalfHeight * 2.0f, fHalfDepth * 2.0f, 30);
+	std::shared_ptr<CMesh> mesh = std::make_shared<CWallMesh>(
+		fHalfWidth * 2.0f,
+		fHalfHeight * 2.0f,
+		fHalfDepth * 2.0f,
+		30
+	);
 
 	m_pWallsObject = std::make_unique<CWallsObject>();
 	m_pWallsObject->SetPosition(0.0f, 0.0f, 0.0f);
-	m_pWallsObject->SetMesh(pWallCubeMesh);
+	m_pWallsObject->SetMesh(mesh);
 	m_pWallsObject->SetColor(RGB(0, 0, 0));
 	m_pWallsObject->m_pxmf4WallPlanes[0] = XMFLOAT4(+1.0f, 0.0f, 0.0f, fHalfWidth);
 	m_pWallsObject->m_pxmf4WallPlanes[1] = XMFLOAT4(-1.0f, 0.0f, 0.0f, fHalfWidth);
@@ -30,7 +36,8 @@ void TankCScene::BuildObjects()
 	m_pWallsObject->m_pxmf4WallPlanes[5] = XMFLOAT4(0.0f, 0.0f, -1.0f, fHalfDepth);
 	m_pWallsObject->m_xmOOBBPlayerMoveCheck = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fHalfWidth, fHalfHeight, fHalfDepth * 0.05f), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 
-	CCubeMesh* pCubeMesh = new CCubeMesh(4.0f, 4.0f, 4.0f);
+	//CCubeMesh* pCubeMesh = new CCubeMesh(4.0f, 4.0f, 4.0f);
+	std::shared_ptr<CMesh> pCubeMesh = std::make_shared<CCubeMesh>(4.0f, 4.0f, 4.0f);
 	m_ppObjects.resize(10);
 	//m_ppObjects = new CGameObject * [m_nObjects];
 

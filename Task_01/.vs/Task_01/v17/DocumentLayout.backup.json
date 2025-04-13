@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\3dgp_task01\\Task_01\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\TankScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:TankScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\TankScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:TankScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,71 +39,54 @@
       "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\SceneBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:SceneBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\TankScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:TankScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\TankScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:TankScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GraphicsPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GraphicsPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Task_01.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Task_01.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\khj16\\Downloads\\25-1\\3d\uAC9C\\LabProject(Software Renderer)\\LabProject02-01\\LabProject02-01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.38.33130\\INCLUDE\\XUTILITY||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\StartScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:StartScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\SceneBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:SceneBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\StartScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:StartScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GraphicsPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|solutionrelative:GraphicsPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\khj16\\Downloads\\25-1\\3d\uAC9C\\LabProject(Software Renderer)\\LabProject02-01\\LabProject02-01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D051BF-5CEC-4B0F-9DB5-A286BAAAFF5B}|Task_01.vcxproj|C:\\3dgp_task01\\Task_01\\GraphicsPipeline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -96,11 +107,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 13,
+              "Title": "xutility",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\xutility",
+              "RelativeDocumentMoniker": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\xutility",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\xutility",
+              "RelativeToolTip": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\xutility",
+              "ViewState": "AgIAAOcAAAAAAAAAAAArwP4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-13T06:15:45.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StartScene.cpp",
+              "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\StartScene.cpp",
+              "RelativeDocumentMoniker": "StartScene.cpp",
+              "ToolTip": "C:\\3dgp_task01\\Task_01\\StartScene.cpp",
+              "RelativeToolTip": "StartScene.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-13T05:30:48.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StartScene.h",
+              "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\StartScene.h",
+              "RelativeDocumentMoniker": "StartScene.h",
+              "ToolTip": "C:\\3dgp_task01\\Task_01\\StartScene.h",
+              "RelativeToolTip": "StartScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-13T05:30:28.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "memory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\memory",
               "RelativeDocumentMoniker": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\memory",
@@ -112,33 +162,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\SceneManager.cpp",
               "RelativeDocumentMoniker": "SceneManager.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\SceneManager.cpp",
               "RelativeToolTip": "SceneManager.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAArwCcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-12T14:26:33.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\SceneManager.h",
               "RelativeDocumentMoniker": "SceneManager.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\SceneManager.h",
               "RelativeToolTip": "SceneManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwB0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-12T14:22:12.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "SceneBase.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\SceneBase.h",
               "RelativeDocumentMoniker": "SceneBase.h",
@@ -146,44 +196,47 @@
               "RelativeToolTip": "SceneBase.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T08:06:42.73Z"
+              "WhenOpened": "2025-04-12T08:06:42.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GameFramework.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GameFramework.cpp",
               "RelativeDocumentMoniker": "GameFramework.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\GameFramework.cpp",
               "RelativeToolTip": "GameFramework.cpp",
-              "ViewState": "AgIAAFQAAAAAAAAAAAArwHEAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAArwEwAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-07T15:57:02.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "GameFramework.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GameFramework.h",
               "RelativeDocumentMoniker": "GameFramework.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\GameFramework.h",
               "RelativeToolTip": "GameFramework.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-07T16:41:52.365Z"
+              "WhenOpened": "2025-04-07T16:41:52.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Scene.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Scene.cpp",
               "RelativeDocumentMoniker": "Scene.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Scene.cpp",
               "RelativeToolTip": "Scene.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAArwCcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-07T16:32:24.408Z"
+              "WhenOpened": "2025-04-07T16:32:24.408Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -193,85 +246,92 @@
               "RelativeDocumentMoniker": "TankScene.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\TankScene.h",
               "RelativeToolTip": "TankScene.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T07:58:44.2Z"
+              "WhenOpened": "2025-04-12T07:58:44.2Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "TankScene.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\TankScene.cpp",
               "RelativeDocumentMoniker": "TankScene.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\TankScene.cpp",
               "RelativeToolTip": "TankScene.cpp",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAQwNIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCcAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T07:58:58.288Z"
+              "WhenOpened": "2025-04-12T07:58:58.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "Task_01.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Task_01.h",
               "RelativeDocumentMoniker": "Task_01.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Task_01.h",
               "RelativeToolTip": "Task_01.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T07:59:16.51Z"
+              "WhenOpened": "2025-04-12T07:59:16.51Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Mesh.h",
               "RelativeDocumentMoniker": "Mesh.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Mesh.h",
               "RelativeToolTip": "Mesh.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwD8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T16:22:07.843Z"
+              "WhenOpened": "2025-04-08T16:22:07.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "Mesh.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Mesh.cpp",
               "RelativeDocumentMoniker": "Mesh.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Mesh.cpp",
               "RelativeToolTip": "Mesh.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwJMAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T16:21:35.636Z"
+              "WhenOpened": "2025-04-08T16:21:35.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "GameObject.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GameObject.h",
               "RelativeDocumentMoniker": "GameObject.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\GameObject.h",
               "RelativeToolTip": "GameObject.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAWwCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAArwA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T14:54:04.709Z"
+              "WhenOpened": "2025-04-08T14:54:04.709Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "GameObject.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GameObject.cpp",
               "RelativeDocumentMoniker": "GameObject.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\GameObject.cpp",
               "RelativeToolTip": "GameObject.cpp",
-              "ViewState": "AgIAALgAAAAAAAAAAAAAwNgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAAAMoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-07T16:16:39.891Z"
+              "WhenOpened": "2025-04-07T16:16:39.891Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "GraphicsPipeline.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GraphicsPipeline.h",
               "RelativeDocumentMoniker": "GraphicsPipeline.h",
@@ -283,43 +343,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Scene.h",
               "RelativeDocumentMoniker": "Scene.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Scene.h",
               "RelativeToolTip": "Scene.h",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAWwBwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAWwBAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-07T16:29:49.932Z"
+              "WhenOpened": "2025-04-07T16:29:49.932Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Player.h",
               "RelativeToolTip": "Player.h",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwCwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T13:10:57.343Z"
+              "WhenOpened": "2025-04-08T13:10:57.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 0,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "C:\\3dgp_task01\\Task_01\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAAwLYAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAArwIkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T13:10:50.893Z"
+              "WhenOpened": "2025-04-08T13:10:50.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "GraphicsPipeline.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\GraphicsPipeline.cpp",
               "RelativeDocumentMoniker": "GraphicsPipeline.cpp",
@@ -331,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "stdafx.h",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\stdafx.h",
               "RelativeDocumentMoniker": "stdafx.h",
@@ -343,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "LabProject02-01.cpp",
               "DocumentMoniker": "C:\\Users\\khj16\\Downloads\\25-1\\3d\uAC9C\\LabProject(Software Renderer)\\LabProject02-01\\LabProject02-01.cpp",
               "RelativeDocumentMoniker": "..\\..\\Users\\khj16\\Downloads\\25-1\\3d\uAC9C\\LabProject(Software Renderer)\\LabProject02-01\\LabProject02-01.cpp",
@@ -355,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Task_01.cpp",
               "DocumentMoniker": "C:\\3dgp_task01\\Task_01\\Task_01.cpp",
               "RelativeDocumentMoniker": "Task_01.cpp",

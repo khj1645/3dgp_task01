@@ -24,7 +24,7 @@ XMVECTOR RandomUnitVectorOnSphere()
 
 CGameObject::~CGameObject(void)
 {
-	if (m_pMesh) m_pMesh->Release();
+	//if (m_pMesh) m_pMesh->Release();
 }
 
 void CGameObject::SetPosition(float x, float y, float z)
@@ -136,11 +136,11 @@ void CGameObject::LookAt(XMFLOAT3& xmf3LookAt, XMFLOAT3& xmf3Up)
 
 void CGameObject::UpdateBoundingBox()
 {
-	if (m_pMesh)
-	{
-		m_pMesh->m_xmOOBB.Transform(m_xmOOBB, XMLoadFloat4x4(&m_xmf4x4World));
-		XMStoreFloat4(&m_xmOOBB.Orientation, XMQuaternionNormalize(XMLoadFloat4(&m_xmOOBB.Orientation)));
-	}
+	//if (m_pMesh)
+	//{
+	m_pMesh->m_xmOOBB.Transform(m_xmOOBB, XMLoadFloat4x4(&m_xmf4x4World));
+	XMStoreFloat4(&m_xmOOBB.Orientation, XMQuaternionNormalize(XMLoadFloat4(&m_xmOOBB.Orientation)));
+	//}
 }
 
 void CGameObject::Animate(float fElapsedTime)
@@ -167,7 +167,7 @@ void CGameObject::Render(HDC hDCFrameBuffer, XMFLOAT4X4* pxmf4x4World, CMesh* pM
 
 void CGameObject::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 {
-	if (pCamera->IsInFrustum(m_xmOOBB)) CGameObject::Render(hDCFrameBuffer, &m_xmf4x4World, m_pMesh);
+	if (pCamera->IsInFrustum(m_xmOOBB)) CGameObject::Render(hDCFrameBuffer, &m_xmf4x4World, m_pMesh.get());
 }
 
 void CGameObject::GenerateRayForPicking(XMVECTOR& xmvPickPosition, XMMATRIX& xmmtxView, XMVECTOR& xmvPickRayOrigin, XMVECTOR& xmvPickRayDirection)
@@ -204,7 +204,7 @@ CWallsObject::~CWallsObject()
 
 void CWallsObject::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 {
-	CGameObject::Render(hDCFrameBuffer, &m_xmf4x4World, m_pMesh);
+	CGameObject::Render(hDCFrameBuffer, &m_xmf4x4World, m_pMesh.get());
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////

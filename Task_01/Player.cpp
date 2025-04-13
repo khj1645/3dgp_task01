@@ -133,7 +133,8 @@ void CPlayer::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 //
 CAirplanePlayer::CAirplanePlayer()
 {
-	CCubeMesh* pBulletMesh = new CCubeMesh(1.0f, 4.0f, 1.0f);
+	//CCubeMesh* pBulletMesh = new CCubeMesh(1.0f, 4.0f, 1.0f);
+	std::shared_ptr<CCubeMesh> pBulletMesh = std::make_shared<CCubeMesh>(1.0f, 4.0f, 1.0f);
 	for (int i = 0; i < BULLETS; i++)
 	{
 		m_ppBullets[i] = new CBulletObject(m_fBulletEffectiveRange);

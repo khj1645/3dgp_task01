@@ -6,6 +6,7 @@
 #include "stdafx.h"
 #include "GameFramework.h"
 #include "TankScene.h"
+#include "StartScene.h"
 
 void CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 {
@@ -72,15 +73,16 @@ void CGameFramework::BuildObjects()
 
 	pCamera->GenerateOrthographicProjectionMatrix(1.01f, 50.0f, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT);
 
-	CAirplaneMesh* pAirplaneMesh = new CAirplaneMesh(6.0f, 6.0f, 1.0f);
-
+//CAirplaneMesh* pAirplaneMesh = new CAirplaneMesh(6.0f, 6.0f, 1.0f);
+	std::shared_ptr<CMesh> pAirplaneMesh = std::make_shared<CAirplaneMesh>(6.0f, 6.0f, 1.0f);
 	m_pPlayer = new CAirplanePlayer();
 	m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
 	m_pPlayer->SetMesh(pAirplaneMesh);
 	m_pPlayer->SetColor(RGB(0, 0, 255));
 	m_pPlayer->SetCamera(pCamera);
 	m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
-	auto tankScene = std::make_shared<TankCScene>(m_pPlayer);
+	m_SceneManager.SetPlayer(m_pPlayer);
+	auto tankScene = std::make_shared<StartScene>(m_pPlayer);
 	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
 	m_SceneManager.ChangeScene(baseScene, SceneType::Tank);
 	//m_SceneManager.BuildObjects();

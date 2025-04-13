@@ -2,7 +2,7 @@
 
 #include "Mesh.h"
 #include "Camera.h"
-
+#include <memory>
 class CGameObject
 {
 public:
@@ -12,7 +12,8 @@ public:
 public:
 	bool						m_bActive = true;
 
-	CMesh*						m_pMesh = NULL;
+	// CMesh*						m_pMesh = NULL;
+	std::shared_ptr<CMesh>		m_pMesh = nullptr;
 	XMFLOAT4X4					m_xmf4x4World = Matrix4x4::Identity();
 
 	BoundingOrientedBox			m_xmOOBB = BoundingOrientedBox();
@@ -29,8 +30,9 @@ public:
 
 public:
 	void SetActive(bool bActive) { m_bActive = bActive; }
-	void SetMesh(CMesh *pMesh) { m_pMesh = pMesh; if (pMesh) pMesh->AddRef(); }
-
+	void SetMesh(std::shared_ptr<CMesh> pMesh) { 
+		m_pMesh = pMesh;
+}
 	void SetColor(DWORD dwColor) { m_dwColor = dwColor; }
 
 	void SetRotationTransform(XMFLOAT4X4 *pmxf4x4Transform);

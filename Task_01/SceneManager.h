@@ -2,7 +2,9 @@
 
 #include <memory>
 #include "SceneBase.h"
+#include "TankScene.h"
 #include "Camera.h"
+
 
 enum class SceneType {
     Start,
@@ -23,8 +25,9 @@ public:
     void HandleInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
     CGameObject* PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera);
     SceneType GetCurrentSceneType() const;
-
+    void CSceneManager::SetPlayer(CPlayer* pPlayer);
 private:
     std::shared_ptr<CSceneBase> m_pCurrentScene = nullptr;
     SceneType m_CurrentSceneType = SceneType::Start;
+    CPlayer* m_pPlayer;
 };
