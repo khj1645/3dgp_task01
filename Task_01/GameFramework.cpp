@@ -84,7 +84,7 @@ void CGameFramework::BuildObjects()
 	m_SceneManager.SetPlayer(m_pPlayer);
 	auto tankScene = std::make_shared<StartScene>(m_pPlayer);
 	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
-	m_SceneManager.ChangeScene(baseScene, SceneType::Tank);
+	m_SceneManager.ChangeScene(baseScene, SceneType::Start);
 	//m_SceneManager.BuildObjects();
 	//m_pScene = new CScene(m_pPlayer);
 	//m_pScene->BuildObjects();
@@ -135,8 +135,10 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 		case VK_RETURN:
 			break;
 		case VK_CONTROL:
-			((CAirplanePlayer*)m_pPlayer)->FireBullet(m_pLockedObject);
-			m_pLockedObject = NULL;
+			if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank) {
+				((CAirplanePlayer*)m_pPlayer)->FireBullet(m_pLockedObject);
+				m_pLockedObject = NULL;
+			}
 			break;
 		default:
 			m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);

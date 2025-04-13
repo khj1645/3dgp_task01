@@ -1,5 +1,8 @@
 #pragma once
 
+#include <vector>
+#include <map>
+#include <string>
 #include "SceneBase.h"
 #include "GameObject.h"
 #include "Camera.h"
@@ -13,7 +16,7 @@ public:
 	virtual ~StartScene();
 
 private:
-	std::unique_ptr<CWallsObject> m_pWallsObject;
+	//std::unique_ptr<CWallsObject> m_pWallsObject;
 	//CWallsObject* m_pWallsObject = NULL;
 
 #ifdef _WITH_DRAW_AXIS
