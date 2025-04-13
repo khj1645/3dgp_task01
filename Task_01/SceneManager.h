@@ -10,7 +10,8 @@
 enum class SceneType {
     Start,
     Roller,
-    Tank
+    Tank,
+    Title
 };
 
 class CSceneManager {

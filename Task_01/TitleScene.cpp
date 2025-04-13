@@ -1,92 +1,91 @@
 #include "stdafx.h"
-#include "StartScene.h"
+#include "TitleScene.h"
 #include "GraphicsPipeline.h"
 
-StartScene::StartScene(CPlayer* pPlayer)
+TitleScene::TitleScene(CPlayer* pPlayer)
 	: CSceneBase(pPlayer) {
 	m_pPlayer = pPlayer;
 }
 
-StartScene::~StartScene()
+TitleScene::~TitleScene()
 {
 }
 
-void StartScene::BuildObjects()
+void TitleScene::BuildObjects()
 {
 	auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
+	auto widthbarMesh = std::make_shared<CCubeMesh>(1.0f, 6.0f, 1.0f);
 	std::map<std::string, std::vector<XMFLOAT3>> word_letter_positions;
 	std::vector<XMFLOAT3> letter_K = {
 	{0, 0, 0}, {0, 1, 0}, {0, 2, 0}, {0, 3, 0}, {0, 4, 0}, {0, 5, 0},
 	{1, 2, 0}, {2, 1, 0}, {2, 3, 0}, {3, 0, 0}, {3, 4, 0}
 	};
-	word_letter_positions["Start"] = {
-		// S
-		{1, 9, 0}, {2, 9, 0}, {3, 9, 0}, {4, 9, 0}, {5, 9, 0},
-		{0, 8, 0}, {5, 8, 0},
-		{0, 7, 0},
-		{0, 6, 0},
-		{1, 5, 0}, {2, 5, 0}, {3, 5, 0}, {4, 5, 0},
-		{5, 4, 0},
-		{5, 3, 0},
-		{5, 2, 0},
-		{0, 1, 0}, {5, 1, 0},
-		{1, 0, 0}, {2, 0, 0}, {3, 0, 0}, {4, 0, 0},
+	word_letter_positions["김한준"] = {
+		  {0, 5, 0}, {1, 5, 0}, {2, 5, 0}, {3, 5, 0}, {4, 5, 0},
+		  {4, 4, 0}, {4, 3, 0}, {4, 2, 0}, {4, 1, 0},		// ㄱ
 
-		// T (x offset +12)
-		{13, 9, 0}, {14, 9, 0}, {15, 9, 0}, {16, 9, 0}, {17, 9, 0}, {18, 9, 0}, {19, 9, 0}, {20, 9, 0}, {21, 9, 0}, {22, 9, 0},
-		{17, 8, 0}, {17, 7, 0}, {17, 6, 0}, {17, 5, 0}, {17, 4, 0},
-		{17, 3, 0}, {17, 2, 0}, {17, 1, 0}, {17, 0, 0},
+		  {6, 3, 0},			// ㅣ								
 
-		// A (x offset +24)
-		{27, 9, 0},
-{26, 8, 0}, {27, 8, 0}, {28, 8, 0},
-{25, 7, 0}, {29, 7, 0},
-{25, 6, 0}, {29, 6, 0},
-{24, 5, 0}, {30, 5, 0},
-{24, 4, 0}, {25, 4, 0}, {26, 4, 0}, {27, 4, 0}, {28, 4, 0}, {29, 4, 0}, {30, 4, 0},
-{24, 3, 0}, {30, 3, 0},
-{24, 2, 0}, {30, 2, 0},
-{24, 1, 0}, {30, 1, 0},
-{24, 0, 0}, {30, 0, 0},
+		  {4, -1, 0}, {5, -1, 0}, {6, -1, 0},
 
-		// R (x offset +36)
-		{36, 9, 0}, {37, 9, 0}, {38, 9, 0}, {39, 9, 0}, {40, 9, 0},
-		{36, 8, 0}, {41, 8, 0},
-		{36, 7, 0}, {41, 7, 0},
-		{36, 6, 0}, {37, 6, 0}, {38, 6, 0}, {39, 6, 0}, {40, 6, 0},
-		{36, 5, 0}, {38, 5, 0},
-		{36, 4, 0}, {39, 4, 0},
-		{36, 3, 0}, {40, 3, 0},
-		{36, 2, 0}, {41, 2, 0},
+		  {4, -2, 0}, {6, -2, 0},	// ㅁ
 
-		// T (x offset +48)
-		{49, 9, 0}, {50, 9, 0}, {51, 9, 0}, {52, 9, 0}, {53, 9, 0}, {54, 9, 0}, {55, 9, 0}, {56, 9, 0}, {57, 9, 0}, {58, 9, 0},
-		{53, 8, 0}, {53, 7, 0}, {53, 6, 0}, {53, 5, 0}, {53, 4, 0},
-		{53, 3, 0}, {53, 2, 0}, {53, 1, 0}, {53, 0, 0}
+		  {4, -3, 0}, {5, -3, 0}, {6, -3, 0},
+
+
+	{ 10, 2.5, 0 }, {11, 2.5, 0}, { 12, 2.5, 0 },
+	{10, 1.5, 0}, {12, 1.5, 0},
+
+	{10, 0.5, 0}, {11, 0.5, 0}, {12, 0.5, 0},
+
+	{9, 4, 0}, {10, 4, 0}, {11, 4, 0}, {12, 4, 0}, {13, 4, 0},
+
+	{10, 5.5, 0}, {11, 5.5, 0}, {12, 5.5, 0},			// ㅎ
+
+	{15, 3.5, 0},{16, 3.5, 0}, {17, 3.5, 0},			// ㅣ
+
+	{12, -3, 0}, {13, -3, 0}, {14, -3, 0}, {15, -3, 0},
+	{12, -1, 0}, {12, -2, 0}, {12, -3, 0},			// ㄴ
+
+		{19,6,0}, { 20, 6, 0 }, {21, 6, 0}, {22, 6, 0}, {23, 6, 0}, {24, 6, 0},{25, 6, 0},
+
+	{22, 5, 0}, {21, 4, 0}, {20, 3, 0},{19, 2, 0},
+
+	{23, 4, 0}, {24, 3, 0}, {25, 2, 0},							// ㅈ
+
+		{19,0.5,0},{20,0.5,0},{21,0.5,0}, { 22,0.5,0 },{23,0.5,0},{24,0.5,0},{25,0.5,0}, {22,-0.5,0}, {22,-1.5,0},							// ㅜ
+
+	{20.5, -3, 0}, {21.5, -3, 0}, {22.5, -3, 0}, {23.5, -3, 0},
+	{20.5, -1, 0}, {20.5, -2, 0}, {20.5, -3, 0}						// ㄴ
 	};
-		float scale = 0.6f;
-	auto& coords = word_letter_positions["Start"];
+	float scale = 0.6f;
+	auto& coords = word_letter_positions["김한준"];
 	for (const auto& pos : coords) {
-		float x = (pos.x - 30) * scale;
-		float y = pos.y * scale;
-		float z = pos.z + 10;
+		float x = (pos.x - 20);
+		float y = pos.y;
+		float z = pos.z + 20;
 		auto cube = std::make_unique<CGameObject>();
-		cube->SetMesh(cubeMesh);
+		if (((pos.x == 6) && pos.y == 3 && pos.z == 0) || (((pos.x == 15) && pos.y == 3.5 && pos.z == 0))) {
+			// ㅣ는 따로 긴 큐브 메쉬 사용
+			cube->SetMesh(widthbarMesh);
+		}
+		else {
+			cube->SetMesh(cubeMesh);
+		}
 		cube->SetPosition(x, y, z);
 		m_ppObjects.push_back(std::move(cube));
 	}
 }
-
-void StartScene::ReleaseObjects()
+void TitleScene::ReleaseObjects()
 {
-	
+
 }
 
-void StartScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
+void TitleScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
 }
 
-void StartScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
+void TitleScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
 	switch (nMessageID)
 	{
@@ -102,7 +101,7 @@ void StartScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 		case '7':
 		case '8':
 		case '9':
-		
+
 		case 'A':
 		default:
 			break;
@@ -113,7 +112,7 @@ void StartScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 	}
 }
 
-CGameObject* StartScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera)
+CGameObject* TitleScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera)
 {
 	XMFLOAT3 xmf3PickPosition;
 	xmf3PickPosition.x = (((2.0f * xClient) / (float)pCamera->m_Viewport.m_nWidth) - 1) / pCamera->m_xmf4x4PerspectiveProject._11;
@@ -125,7 +124,7 @@ CGameObject* StartScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 
 	int nIntersected = 0;
 	float fNearestHitDistance = FLT_MAX;
-	CGameObject* pNearestObject = NULL;
+	CGameObject* pNearestObject = nullptr;
 	for (int i = 0; i < m_ppObjects.size(); i++)
 	{
 		float fHitDistance = FLT_MAX;
@@ -139,27 +138,27 @@ CGameObject* StartScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 	return(pNearestObject);
 }
 
-void StartScene::CheckObjectByObjectCollisions()
+void TitleScene::CheckObjectByObjectCollisions()
 {
 }
 
-void StartScene::CheckObjectByWallCollisions()
+void TitleScene::CheckObjectByWallCollisions()
 {
-	
+
 }
 
-void StartScene::CheckPlayerByWallCollision()
+void TitleScene::CheckPlayerByWallCollision()
 {
 }
 
-void StartScene::CheckObjectByBulletCollisions()
+void TitleScene::CheckObjectByBulletCollisions()
 {
-	
+
 }
 
-void StartScene::Animate(float fElapsedTime)
+void TitleScene::Animate(float fElapsedTime)
 {
-	/*XMFLOAT3 center = {2.0f, 4.5f * 0.6f, 10.0f};
+	XMFLOAT3 center = { -4.5f, 0.9f, 20.0f };
 	//m_pWallsObject->Animate(fElapsedTime);
 	for (auto& cube : m_ppObjects)
 	{
@@ -187,7 +186,7 @@ void StartScene::Animate(float fElapsedTime)
 		};
 
 		cube->SetPosition(finalPos);
-	}*/
+	}
 	//for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Animate(fElapsedTime);
 
 	CheckPlayerByWallCollision();
@@ -199,7 +198,7 @@ void StartScene::Animate(float fElapsedTime)
 	CheckObjectByBulletCollisions();
 }
 
-void StartScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
+void TitleScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 {
 	CGraphicsPipeline::SetViewport(&pCamera->m_Viewport);
 

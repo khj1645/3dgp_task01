@@ -7,6 +7,7 @@
 #include "GameFramework.h"
 #include "TankScene.h"
 #include "StartScene.h"
+#include "TitleScene.h"
 
 void CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 {
@@ -82,9 +83,9 @@ void CGameFramework::BuildObjects()
 	m_pPlayer->SetCamera(pCamera);
 	m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
 	m_SceneManager.SetPlayer(m_pPlayer);
-	auto tankScene = std::make_shared<StartScene>(m_pPlayer);
+	auto tankScene = std::make_shared<TitleScene>(m_pPlayer);
 	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
-	m_SceneManager.ChangeScene(baseScene, SceneType::Start);
+	m_SceneManager.ChangeScene(baseScene, SceneType::Title);
 	//m_SceneManager.BuildObjects();
 	//m_pScene = new CScene(m_pPlayer);
 	//m_pScene->BuildObjects();
@@ -99,7 +100,7 @@ void CGameFramework::ReleaseObjects()
 
 void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
-	m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
+	//m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
 
 	switch (nMessageID)
 	{
@@ -108,6 +109,14 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 		::SetCapture(hWnd);
 		::GetCursorPos(&m_ptOldCursorPos);
 		if (nMessageID == WM_RBUTTONDOWN) m_pLockedObject = m_SceneManager.PickObjectPointedByCursor(LOWORD(lParam), HIWORD(lParam), m_pPlayer->m_pCamera);
+		if (m_SceneManager.GetCurrentSceneType() == SceneType::Title && m_pLockedObject != nullptr) {
+			auto newScene = std::make_shared<StartScene>(m_pPlayer);
+			m_SceneManager.ChangeScene(newScene, SceneType::Start);
+		}
+		else if (m_SceneManager.GetCurrentSceneType() == SceneType::Start && m_pLockedObject != nullptr) {
+			auto newScene = std::make_shared<TankCScene>(m_pPlayer);
+			m_SceneManager.ChangeScene(newScene, SceneType::Tank);
+		}
 		break;
 	case WM_LBUTTONUP:
 	case WM_RBUTTONUP:
@@ -122,7 +131,7 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 
 void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
-	m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
+	//m_SceneManager.HandleInput(hWnd, nMessageID, wParam, lParam);
 
 	switch (nMessageID)
 	{
@@ -181,44 +190,46 @@ LRESULT CALLBACK CGameFramework::OnProcessingWindowMessage(HWND hWnd, UINT nMess
 
 void CGameFramework::ProcessInput()
 {
-	static UCHAR pKeyBuffer[256];
-	if (GetKeyboardState(pKeyBuffer))
-	{
-		DWORD dwDirection = 0;
-		if (pKeyBuffer[VK_UP] & 0xF0) dwDirection |= DIR_FORWARD;
-		if (pKeyBuffer[VK_DOWN] & 0xF0) dwDirection |= DIR_BACKWARD;
-		if (pKeyBuffer[VK_LEFT] & 0xF0) dwDirection |= DIR_LEFT;
-		if (pKeyBuffer[VK_RIGHT] & 0xF0) dwDirection |= DIR_RIGHT;
-		if (pKeyBuffer[VK_PRIOR] & 0xF0) dwDirection |= DIR_UP;
-		if (pKeyBuffer[VK_NEXT] & 0xF0) dwDirection |= DIR_DOWN;
-
-		if (dwDirection) m_pPlayer->Move(dwDirection, 0.15f);
-	}
-
-	if (GetCapture() == m_hWnd)
-	{
-		SetCursor(NULL);
-		POINT ptCursorPos;
-		GetCursorPos(&ptCursorPos);
-		float cxMouseDelta = (float)(ptCursorPos.x - m_ptOldCursorPos.x) / 3.0f;
-		float cyMouseDelta = (float)(ptCursorPos.y - m_ptOldCursorPos.y) / 3.0f;
-		SetCursorPos(m_ptOldCursorPos.x, m_ptOldCursorPos.y);
-		if (cxMouseDelta || cyMouseDelta)
+	if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank) {
+		static UCHAR pKeyBuffer[256];
+		if (GetKeyboardState(pKeyBuffer))
 		{
-			if (pKeyBuffer[VK_RBUTTON] & 0xF0)
-				m_pPlayer->Rotate(cyMouseDelta, 0.0f, -cxMouseDelta);
-			else
-				m_pPlayer->Rotate(cyMouseDelta, cxMouseDelta, 0.0f);
-		}
-	}
+			DWORD dwDirection = 0;
+			if (pKeyBuffer[VK_UP] & 0xF0) dwDirection |= DIR_FORWARD;
+			if (pKeyBuffer[VK_DOWN] & 0xF0) dwDirection |= DIR_BACKWARD;
+			if (pKeyBuffer[VK_LEFT] & 0xF0) dwDirection |= DIR_LEFT;
+			if (pKeyBuffer[VK_RIGHT] & 0xF0) dwDirection |= DIR_RIGHT;
+			if (pKeyBuffer[VK_PRIOR] & 0xF0) dwDirection |= DIR_UP;
+			if (pKeyBuffer[VK_NEXT] & 0xF0) dwDirection |= DIR_DOWN;
 
-	m_pPlayer->Update(m_GameTimer.GetTimeElapsed());
+			if (dwDirection) m_pPlayer->Move(dwDirection, 0.15f);
+		}
+
+		if (GetCapture() == m_hWnd)
+		{
+			SetCursor(NULL);
+			POINT ptCursorPos;
+			GetCursorPos(&ptCursorPos);
+			float cxMouseDelta = (float)(ptCursorPos.x - m_ptOldCursorPos.x) / 3.0f;
+			float cyMouseDelta = (float)(ptCursorPos.y - m_ptOldCursorPos.y) / 3.0f;
+			SetCursorPos(m_ptOldCursorPos.x, m_ptOldCursorPos.y);
+			if (cxMouseDelta || cyMouseDelta)
+			{
+				if (pKeyBuffer[VK_RBUTTON] & 0xF0)
+					m_pPlayer->Rotate(cyMouseDelta, 0.0f, -cxMouseDelta);
+				else
+					m_pPlayer->Rotate(cyMouseDelta, cxMouseDelta, 0.0f);
+			}
+		}
+
+		m_pPlayer->Update(m_GameTimer.GetTimeElapsed());
+	}
 }
 
 void CGameFramework::AnimateObjects()
 {
 	float fTimeElapsed = m_GameTimer.GetTimeElapsed();
-	if (m_pPlayer) m_pPlayer->Animate(fTimeElapsed);
+	if (m_pPlayer && m_SceneManager.GetCurrentSceneType() == SceneType::Tank) m_pPlayer->Animate(fTimeElapsed);
 	m_SceneManager.Update(fTimeElapsed);
 }
 
