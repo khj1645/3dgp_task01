@@ -80,6 +80,14 @@ public:
 	virtual ~CAirplaneMesh() { }
 };
 
+class CTankMesh : public CMesh
+{
+public:
+	CTankMesh(float fWidth = 20.0f, float fHeight = 20.0f, float fDepth = 4.0f);
+	
+	virtual ~CTankMesh() {}
+};
+
 class CAxisMesh : public CMesh
 {
 public:

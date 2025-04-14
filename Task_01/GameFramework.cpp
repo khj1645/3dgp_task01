@@ -75,7 +75,7 @@ void CGameFramework::BuildObjects()
 	pCamera->GenerateOrthographicProjectionMatrix(1.01f, 50.0f, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT);
 
 //CAirplaneMesh* pAirplaneMesh = new CAirplaneMesh(6.0f, 6.0f, 1.0f);
-	std::shared_ptr<CMesh> pAirplaneMesh = std::make_shared<CAirplaneMesh>(6.0f, 6.0f, 1.0f);
+	std::shared_ptr<CMesh> pAirplaneMesh = std::make_shared<CTankMesh>(6.0f, 6.0f, 1.0f);
 	m_pPlayer = new CAirplanePlayer();
 	m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
 	m_pPlayer->SetMesh(pAirplaneMesh);
@@ -114,6 +114,8 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 			m_SceneManager.ChangeScene(newScene, SceneType::Start);
 		}
 		else if (m_SceneManager.GetCurrentSceneType() == SceneType::Start && m_pLockedObject != nullptr) {
+			m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
+			//m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 0.0f, 0.0f));
 			auto newScene = std::make_shared<TankCScene>(m_pPlayer);
 			m_SceneManager.ChangeScene(newScene, SceneType::Tank);
 		}

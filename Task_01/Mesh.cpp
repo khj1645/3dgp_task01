@@ -427,6 +427,94 @@ CAirplaneMesh::CAirplaneMesh(float fWidth, float fHeight, float fDepth) : CMesh(
 	m_xmOOBB = BoundingOrientedBox(XMFLOAT3(0.0f, 0.0f, 0.0f), XMFLOAT3(fx, fy, fz), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 }
 
+CTankMesh::CTankMesh(float fWidth, float fHeight, float fDepth) : CMesh(18)
+{
+	int i = 0;
+
+	// 1층 바디
+	float bw = fWidth * 0.5f;
+	float bh = fHeight * 0.15f;  // 바디 높이 = 전체의 30% / 2
+	float bd = fDepth * 0.5f;
+
+	float bcy = bh; // 바디 중심 y
+
+	// 2층 탑
+	float tw = fWidth * 0.25f;
+	float th = fHeight * 0.2f;
+	float td = fDepth * 0.25f;
+
+	float tcy = bh * 2 + th; // 바디 위에 탑이 올라감
+
+	// 포신
+	float pw = fWidth * 0.05f;
+	float ph = fHeight * 0.05f;
+	float pd = fDepth * 0.3f;
+
+	float pcy = tcy + th * 0.5f;
+	float pcz = -(bd + pd); // 앞쪽으로 돌출
+
+	auto makeBox = [&](float cx, float cy, float cz, float hw, float hh, float hd) {
+		// 앞
+		CPolygon front(4);
+		front.SetVertex(0, CVertex(cx - hw, cy + hh, cz + hd));
+		front.SetVertex(1, CVertex(cx + hw, cy + hh, cz + hd));
+		front.SetVertex(2, CVertex(cx + hw, cy - hh, cz + hd));
+		front.SetVertex(3, CVertex(cx - hw, cy - hh, cz + hd));
+		SetPolygon(i++, front);
+
+		// 뒤
+		CPolygon back(4);
+		back.SetVertex(0, CVertex(cx + hw, cy + hh, cz - hd));
+		back.SetVertex(1, CVertex(cx - hw, cy + hh, cz - hd));
+		back.SetVertex(2, CVertex(cx - hw, cy - hh, cz - hd));
+		back.SetVertex(3, CVertex(cx + hw, cy - hh, cz - hd));
+		SetPolygon(i++, back);
+
+		// 위
+		CPolygon top(4);
+		top.SetVertex(0, CVertex(cx - hw, cy + hh, cz - hd));
+		top.SetVertex(1, CVertex(cx + hw, cy + hh, cz - hd));
+		top.SetVertex(2, CVertex(cx + hw, cy + hh, cz + hd));
+		top.SetVertex(3, CVertex(cx - hw, cy + hh, cz + hd));
+		SetPolygon(i++, top);
+
+		// 아래
+		CPolygon bottom(4);
+		bottom.SetVertex(0, CVertex(cx - hw, cy - hh, cz + hd));
+		bottom.SetVertex(1, CVertex(cx + hw, cy - hh, cz + hd));
+		bottom.SetVertex(2, CVertex(cx + hw, cy - hh, cz - hd));
+		bottom.SetVertex(3, CVertex(cx - hw, cy - hh, cz - hd));
+		SetPolygon(i++, bottom);
+
+		// 왼
+		CPolygon left(4);
+		left.SetVertex(0, CVertex(cx - hw, cy + hh, cz - hd));
+		left.SetVertex(1, CVertex(cx - hw, cy + hh, cz + hd));
+		left.SetVertex(2, CVertex(cx - hw, cy - hh, cz + hd));
+		left.SetVertex(3, CVertex(cx - hw, cy - hh, cz - hd));
+		SetPolygon(i++, left);
+
+		// 오
+		CPolygon right(4);
+		right.SetVertex(0, CVertex(cx + hw, cy + hh, cz + hd));
+		right.SetVertex(1, CVertex(cx + hw, cy + hh, cz - hd));
+		right.SetVertex(2, CVertex(cx + hw, cy - hh, cz - hd));
+		right.SetVertex(3, CVertex(cx + hw, cy - hh, cz + hd));
+		SetPolygon(i++, right);
+		};
+
+	makeBox(0.0f, bcy, 0.0f, bw, bh, bd);       // 바디
+	makeBox(0.0f, tcy, 0.0f, tw, th, td);       // 탑
+	makeBox(0.0f, pcy, pcz, pw, ph, pd);        // 포신
+
+	m_xmOOBB = BoundingOrientedBox(
+		XMFLOAT3(0.0f, tcy, 0.0f),
+		XMFLOAT3(bw, tcy + th, bd + pd),
+		XMFLOAT4(0, 0, 0, 1)
+	);
+	
+}
+
 CAxisMesh::CAxisMesh(float fWidth, float fHeight, float fDepth) : CMesh(3)
 {
 	float fHalfWidth = fWidth * 0.5f;

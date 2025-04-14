@@ -17,7 +17,7 @@ public:
 
 	XMFLOAT3					m_xmf3CameraOffset = XMFLOAT3(0.0f, 0.0f, 0.0f);
 	XMFLOAT3					m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
-
+	XMFLOAT3					m_xmf3PreviousPosition = XMFLOAT3(0, 0, 0);
 	float						m_fFriction = 125.0f;
 
 	float           			m_fPitch = 0.0f;
@@ -28,6 +28,7 @@ public:
 
 public:
 	void SetPosition(float x, float y, float z);
+	void SetPosition(XMFLOAT3&);
 	void SetRotation(float x, float y, float z);
 
 	void LookAt(XMFLOAT3& xmf3LookAt, XMFLOAT3& xmf3Up);
@@ -68,3 +69,19 @@ public:
 	virtual void Render(HDC hDCFrameBuffer, CCamera* pCamera);
 };
 
+
+class CTankPlayer : public CPlayer
+{
+public:
+	CTankPlayer();
+	virtual ~CTankPlayer();
+
+	float						m_fBulletEffectiveRange = 150.0f;
+	CBulletObject* m_ppBullets[BULLETS];
+
+	void FireBullet(CGameObject* pLockedObject);
+
+	virtual void OnUpdateTransform();
+	virtual void Animate(float fElapsedTime);
+	virtual void Render(HDC hDCFrameBuffer, CCamera* pCamera);
+};

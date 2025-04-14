@@ -18,7 +18,11 @@ void CPlayer::SetPosition(float x, float y, float z)
 
 	CGameObject::SetPosition(x, y, z);
 }
+void CPlayer::SetPosition(XMFLOAT3& pos)
+{
 
+	CGameObject::SetPosition(pos);
+}
 void CPlayer::SetCameraOffset(XMFLOAT3& xmf3CameraOffset)
 {
 	m_xmf3CameraOffset = xmf3CameraOffset;
@@ -44,6 +48,7 @@ void CPlayer::Move(DWORD dwDirection, float fDistance)
 
 void CPlayer::Move(XMFLOAT3& xmf3Shift, bool bUpdateVelocity)
 {
+	m_xmf3PreviousPosition = m_xmf3Position;
 	if (bUpdateVelocity)
 	{
 		m_xmf3Velocity = Vector3::Add(m_xmf3Velocity, xmf3Shift);
@@ -184,6 +189,94 @@ void CAirplanePlayer::FireBullet(CGameObject* pLockedObject)
 		OnUpdateTransform();
 	}
 */
+
+	CBulletObject* pBulletObject = NULL;
+	for (int i = 0; i < BULLETS; i++)
+	{
+		if (!m_ppBullets[i]->m_bActive)
+		{
+			pBulletObject = m_ppBullets[i];
+			break;
+		}
+	}
+
+	if (pBulletObject)
+	{
+		XMFLOAT3 xmf3Position = GetPosition();
+		XMFLOAT3 xmf3Direction = GetUp();
+		XMFLOAT3 xmf3FirePosition = Vector3::Add(xmf3Position, Vector3::ScalarProduct(xmf3Direction, 6.0f, false));
+
+		pBulletObject->m_xmf4x4World = m_xmf4x4World;
+
+		pBulletObject->SetFirePosition(xmf3FirePosition);
+		pBulletObject->SetMovingDirection(xmf3Direction);
+		pBulletObject->SetColor(RGB(255, 0, 0));
+		pBulletObject->SetActive(true);
+
+		if (pLockedObject)
+		{
+			pBulletObject->m_pLockedObject = pLockedObject;
+			pBulletObject->SetColor(RGB(0, 0, 255));
+		}
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+CTankPlayer::CTankPlayer()
+{
+	//CCubeMesh* pBulletMesh = new CCubeMesh(1.0f, 4.0f, 1.0f);
+	std::shared_ptr<CCubeMesh> pBulletMesh = std::make_shared<CCubeMesh>(1.0f, 4.0f, 1.0f);
+	for (int i = 0; i < BULLETS; i++)
+	{
+		m_ppBullets[i] = new CBulletObject(m_fBulletEffectiveRange);
+		m_ppBullets[i]->SetMesh(pBulletMesh);
+		m_ppBullets[i]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
+		m_ppBullets[i]->SetRotationSpeed(360.0f);
+		m_ppBullets[i]->SetMovingSpeed(120.0f);
+		m_ppBullets[i]->SetActive(false);
+	}
+}
+
+CTankPlayer::~CTankPlayer()
+{
+	for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]) delete m_ppBullets[i];
+}
+
+void CTankPlayer::Animate(float fElapsedTime)
+{
+	CPlayer::Animate(fElapsedTime);
+
+	for (int i = 0; i < BULLETS; i++)
+	{
+		if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Animate(fElapsedTime);
+	}
+}
+
+void CTankPlayer::OnUpdateTransform()
+{
+	CPlayer::OnUpdateTransform();
+
+	m_xmf4x4World = Matrix4x4::Multiply(XMMatrixRotationRollPitchYaw(XMConvertToRadians(90.0f), 0.0f, 0.0f), m_xmf4x4World);
+}
+
+void CTankPlayer::Render(HDC hDCFrameBuffer, CCamera* pCamera)
+{
+	CPlayer::Render(hDCFrameBuffer, pCamera);
+
+	for (int i = 0; i < BULLETS; i++) if (m_ppBullets[i]->m_bActive) m_ppBullets[i]->Render(hDCFrameBuffer, pCamera);
+}
+
+void CTankPlayer::FireBullet(CGameObject* pLockedObject)
+{
+	/*
+		if (pLockedObject)
+		{
+			LookAt(pLockedObject->GetPosition(), XMFLOAT3(0.0f, 1.0f, 0.0f));
+			OnUpdateTransform();
+		}
+	*/
 
 	CBulletObject* pBulletObject = NULL;
 	for (int i = 0; i < BULLETS; i++)

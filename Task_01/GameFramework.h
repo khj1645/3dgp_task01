@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "Player.h"
 #include "Scene.h"
 #include "SceneManager.h"
@@ -22,7 +23,6 @@ private:
     HDC							m_hDCFrameBuffer = NULL;
     HBITMAP						m_hBitmapFrameBuffer = NULL;
     HBITMAP						m_hBitmapSelect = NULL;
-
 	CPlayer*					m_pPlayer = NULL;
 	//CScene*						m_pScene = NULL;
 	CSceneManager				m_SceneManager;
