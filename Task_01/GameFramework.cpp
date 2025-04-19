@@ -8,6 +8,7 @@
 #include "TankScene.h"
 #include "StartScene.h"
 #include "TitleScene.h"
+#include "RoallerCoaster.h"
 
 void CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 {
@@ -116,9 +117,16 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 		else if (m_SceneManager.GetCurrentSceneType() == SceneType::Start && m_pLockedObject != nullptr) {
 			m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
 			//m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 0.0f, 0.0f));
-			auto newScene = std::make_shared<TankCScene>(m_pPlayer);
-			m_SceneManager.ChangeScene(newScene, SceneType::Tank);
+
+			auto newScene = std::make_shared<RoallerCoasterScene>(m_pPlayer);
+			m_SceneManager.ChangeScene(newScene, SceneType::Roller);
 		}
+		//else if (m_SceneManager.GetCurrentSceneType() == SceneType::Roller) {
+		//	m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
+		//	//m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 0.0f, 0.0f));
+		//	auto newScene = std::make_shared<TankCScene>(m_pPlayer);
+		//	m_SceneManager.ChangeScene(newScene, SceneType::Tank);
+		//}
 		break;
 	case WM_LBUTTONUP:
 	case WM_RBUTTONUP:
@@ -192,7 +200,7 @@ LRESULT CALLBACK CGameFramework::OnProcessingWindowMessage(HWND hWnd, UINT nMess
 
 void CGameFramework::ProcessInput()
 {
-	if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank) {
+	if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank || m_SceneManager.GetCurrentSceneType() == SceneType::Roller) {
 		static UCHAR pKeyBuffer[256];
 		if (GetKeyboardState(pKeyBuffer))
 		{
@@ -231,7 +239,7 @@ void CGameFramework::ProcessInput()
 void CGameFramework::AnimateObjects()
 {
 	float fTimeElapsed = m_GameTimer.GetTimeElapsed();
-	if (m_pPlayer && m_SceneManager.GetCurrentSceneType() == SceneType::Tank) m_pPlayer->Animate(fTimeElapsed);
+	if (m_pPlayer && m_SceneManager.GetCurrentSceneType() == SceneType::Tank ) m_pPlayer->Animate(fTimeElapsed);
 	m_SceneManager.Update(fTimeElapsed);
 }
 
