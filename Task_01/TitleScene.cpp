@@ -13,6 +13,7 @@ TitleScene::~TitleScene()
 
 void TitleScene::BuildObjects()
 {
+
 	auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
 	auto widthbarMesh = std::make_shared<CCubeMesh>(1.0f, 6.0f, 1.0f);
 	std::map<std::string, std::vector<XMFLOAT3>> word_letter_positions;
@@ -135,6 +136,16 @@ CGameObject* TitleScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 			pNearestObject = m_ppObjects[i].get();
 		}
 	}
+	m_ppObjects.clear();
+	CExplosiveObject::PrepareExplosion();
+	auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
+	auto explo = std::make_unique<CExplosiveObject>();
+	explo->SetMesh(cubeMesh);
+	explo->SetColor(RGB(255, 0, 0));
+	explo->SetPosition(-4.5f, 0.9f, 20.0f);
+	explo->m_bBlowingUp = true;
+	isboom = true;
+	m_ppObjects.push_back(std::move(explo));
 	return(pNearestObject);
 }
 
@@ -155,47 +166,21 @@ void TitleScene::CheckObjectByBulletCollisions()
 {
 
 }
-
+bool TitleScene::IsChangeSceneRequested() const { return explosionTime > 2.0f; }
+SceneType TitleScene::GetNextSceneName() const
+{
+	 return SceneType::Start;
+}
 void TitleScene::Animate(float fElapsedTime)
 {
+
 	XMFLOAT3 center = { -4.5f, 0.9f, 20.0f };
-	//m_pWallsObject->Animate(fElapsedTime);
-	for (auto& cube : m_ppObjects)
-	{
-		// 큐브의 현재 위치
-		XMFLOAT3 pos = cube->GetPosition();
-
-		// 중심 기준 상대 좌표
-		XMFLOAT3 relative = {
-			pos.x - center.x,
-			pos.y - center.y,
-			pos.z - center.z
-		};
-
-		// 회전 행렬 생성
-		float angle = 90.f * fElapsedTime;
-		XMFLOAT3 yAxis = XMFLOAT3(0.0f, 1.0f, 0.0f);
-		XMFLOAT4X4 rotMat = Matrix4x4::RotationAxis(yAxis, angle);
-		XMFLOAT3 rotated = Vector3::TransformCoord(relative, rotMat);
-
-		// 회전된 위치 = 중심 + 회전 상대
-		XMFLOAT3 finalPos = {
-			rotated.x + center.x,
-			rotated.y + center.y,
-			rotated.z + center.z
-		};
-
-		cube->SetPosition(finalPos);
-	}
-	//for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Animate(fElapsedTime);
-
-	CheckPlayerByWallCollision();
-
-	CheckObjectByWallCollisions();
-
-	CheckObjectByObjectCollisions();
-
-	CheckObjectByBulletCollisions();
+	XMFLOAT3 yAxis = { 0.0f, 1.0f, 0.0f };
+	float angle = 90.f * fElapsedTime;
+	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->RotateAround(center, yAxis, angle);
+	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Animate(fElapsedTime);
+	if(isboom)
+		explosionTime += fElapsedTime;
 }
 
 void TitleScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)

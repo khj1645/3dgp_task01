@@ -86,7 +86,7 @@ void CGameFramework::BuildObjects()
 	m_SceneManager.SetPlayer(m_pPlayer);
 	auto tankScene = std::make_shared<TitleScene>(m_pPlayer);
 	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
-	m_SceneManager.ChangeScene(baseScene, SceneType::Title);
+	m_SceneManager.ChangeScene(SceneType::Title);
 	//m_SceneManager.BuildObjects();
 	//m_pScene = new CScene(m_pPlayer);
 	//m_pScene->BuildObjects();
@@ -110,16 +110,16 @@ void CGameFramework::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM
 		::SetCapture(hWnd);
 		::GetCursorPos(&m_ptOldCursorPos);
 		if (nMessageID == WM_RBUTTONDOWN) m_pLockedObject = m_SceneManager.PickObjectPointedByCursor(LOWORD(lParam), HIWORD(lParam), m_pPlayer->m_pCamera);
-		if (m_SceneManager.GetCurrentSceneType() == SceneType::Title && m_pLockedObject != nullptr) {
-			auto newScene = std::make_shared<StartScene>(m_pPlayer);
-			m_SceneManager.ChangeScene(newScene, SceneType::Start);
-		}
+		//if (m_SceneManager.GetCurrentSceneType() == SceneType::Title && m_pLockedObject != nullptr) {
+		//	//auto newScene = std::make_shared<StartScene>(m_pPlayer);
+		//	//m_SceneManager.ChangeScene(newScene, SceneType::Start);
+		//}
 		else if (m_SceneManager.GetCurrentSceneType() == SceneType::Start && m_pLockedObject != nullptr) {
-			m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
+			//m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
 			//m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 0.0f, 0.0f));
 
-			auto newScene = std::make_shared<RoallerCoasterScene>(m_pPlayer);
-			m_SceneManager.ChangeScene(newScene, SceneType::Roller);
+			//auto newScene = std::make_shared<RoallerCoasterScene>(m_pPlayer);
+			//m_SceneManager.ChangeScene(newScene, SceneType::Roller);
 		}
 		//else if (m_SceneManager.GetCurrentSceneType() == SceneType::Roller) {
 		//	m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
@@ -148,9 +148,6 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 	case WM_KEYDOWN:
 		switch (wParam)
 		{
-		case VK_ESCAPE:
-			::PostQuitMessage(0);
-			break;
 		case VK_RETURN:
 			break;
 		case VK_CONTROL:

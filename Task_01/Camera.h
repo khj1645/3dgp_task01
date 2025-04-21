@@ -53,7 +53,7 @@ public:
 
 public:
 	void SetFOVAngle(float fFOVAngle);
-
+	void Reset();
 	void GenerateViewMatrix();
 	void GeneratePerspectiveProjectionMatrix(float fNearPlaneDistance, float fFarPlaneDistance, float fFOVAngle);
 	void GenerateOrthographicProjectionMatrix(float fNearPlaneDistance, float fFarPlaneDistance, float fWidth, float hHeight);

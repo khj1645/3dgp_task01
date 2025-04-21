@@ -20,6 +20,8 @@ private:
 	//CWallsObject* m_pWallsObject = NULL;
 	std::vector<XMFLOAT3> m_PathPoints;
 	int index{ 0 };
+	bool ischange{ false };
+	SceneType s;
 #ifdef _WITH_DRAW_AXIS
 	CGameObject* m_pWorldAxis = NULL;
 #endif
@@ -27,7 +29,8 @@ private:
 public:
 	virtual void BuildObjects();
 	virtual void ReleaseObjects();
-
+	virtual bool IsChangeSceneRequested() const;
+	virtual SceneType GetNextSceneName() const;
 	void CheckObjectByObjectCollisions();
 	void CheckObjectByWallCollisions();
 	void CheckPlayerByWallCollision();

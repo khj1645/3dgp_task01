@@ -112,7 +112,30 @@ void CGameObject::Rotate(XMFLOAT3& xmf3RotationAxis, float fAngle)
 	XMFLOAT4X4 mtxRotate = Matrix4x4::RotationAxis(xmf3RotationAxis, fAngle);
 	m_xmf4x4World = Matrix4x4::Multiply(mtxRotate, m_xmf4x4World);
 }
+void CGameObject::RotateAround(const XMFLOAT3& center, XMFLOAT3 axis, float angle)
+{
+	XMFLOAT3 pos = GetPosition();
 
+	// 상대 좌표
+	XMFLOAT3 relative = {
+		pos.x - center.x,
+		pos.y - center.y,
+		pos.z - center.z
+	};
+
+	// 회전 행렬
+	XMFLOAT4X4 rotMat = Matrix4x4::RotationAxis(axis, angle);
+	XMFLOAT3 rotated = Vector3::TransformCoord(relative, rotMat);
+
+	// 다시 중심 기준으로 보정
+	XMFLOAT3 finalPos = {
+		rotated.x + center.x,
+		rotated.y + center.y,
+		rotated.z + center.z
+	};
+
+	SetPosition(finalPos);
+}
 void CGameObject::Move(XMFLOAT3& vDirection, float fSpeed)
 {
 	SetPosition(m_xmf4x4World._41 + vDirection.x * fSpeed, m_xmf4x4World._42 + vDirection.y * fSpeed, m_xmf4x4World._43 + vDirection.z * fSpeed);

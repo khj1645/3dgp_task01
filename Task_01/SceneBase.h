@@ -34,6 +34,7 @@ public:
 	virtual void OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam) = 0;
 	virtual void OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam) = 0;
 	virtual CGameObject* PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera) = 0;
-
+	virtual bool IsChangeSceneRequested() const { return false; }
+	virtual SceneType GetNextSceneName() const { return SceneType::Title; }
 };
 

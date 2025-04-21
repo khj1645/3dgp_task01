@@ -42,7 +42,7 @@ public:
 	void SetCameraOffset(XMFLOAT3& xmf3CameraOffset);
 
 	void Update(float fTimeElapsed = 0.016f);
-
+	void Reset();
 	virtual void OnUpdateTransform();
 	virtual void Animate(float fElapsedTime);
 	virtual void Render(HDC hDCFrameBuffer, CCamera* pCamera);

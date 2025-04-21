@@ -147,7 +147,13 @@ void TankCScene::ReleaseObjects()
 	if (m_pWorldAxis) delete m_pWorldAxis;
 #endif
 }
-
+bool TankCScene::IsChangeSceneRequested() const {
+	return ischange;
+}
+SceneType TankCScene::GetNextSceneName() const
+{
+	return SceneType::Start;
+}
 void TankCScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
 }
@@ -180,6 +186,9 @@ void TankCScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 				pExplosiveObject->m_bBlowingUp = true;
 			}
 			break;
+		case VK_ESCAPE:
+			ischange = true;
+			break;
 		default:
 			break;
 		}
@@ -188,7 +197,6 @@ void TankCScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 		break;
 	}
 }
-
 CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera)
 {
 	XMFLOAT3 xmf3PickPosition;

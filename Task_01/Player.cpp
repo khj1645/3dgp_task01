@@ -113,7 +113,22 @@ void CPlayer::Update(float fTimeElapsed)
 	if (fDeceleration > fLength) fDeceleration = fLength;
 	m_xmf3Velocity = Vector3::Add(m_xmf3Velocity, xmf3Deceleration, fDeceleration);
 }
+void CPlayer::Reset()
+{
+	m_xmf3Position = XMFLOAT3(0.0f, 0.0f, 0.0f);
+	m_xmf3Right = XMFLOAT3(1.0f, 0.0f, 0.0f);
+	m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
+	m_xmf3Look = XMFLOAT3(0.0f, 0.0f, 1.0f);
 
+	m_xmf3CameraOffset = XMFLOAT3(0.0f, 0.0f, 0.0f);
+	m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
+	m_xmf3PreviousPosition = XMFLOAT3(0, 0, 0);
+	m_fFriction = 125.0f;
+
+	m_fPitch = 0.0f;
+	m_fYaw = 0.0f;
+	m_fRoll = 0.0f;
+}
 void CPlayer::Animate(float fElapsedTime)
 {
 	OnUpdateTransform();

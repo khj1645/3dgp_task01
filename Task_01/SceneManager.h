@@ -1,25 +1,21 @@
 #pragma once
 
 #include <memory>
+#include "stdafx.h"
 #include "SceneBase.h"
 #include "TankScene.h"
 #include "StartScene.h"
+#include "TitleScene.h"
+#include "RoallerCoaster.h"
 #include "Camera.h"
 
-
-enum class SceneType {
-    Start,
-    Roller,
-    Tank,
-    Title
-};
 
 class CSceneManager {
 public:
     CSceneManager() = default;
     ~CSceneManager() = default;
 
-    void ChangeScene(std::shared_ptr<CSceneBase> newScene, SceneType type);
+    void ChangeScene(SceneType type);
     void BuildObjects();
     void ReleaseObjects();
     void Update(float dt);

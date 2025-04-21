@@ -18,6 +18,8 @@ public:
 private:
 	//std::unique_ptr<CWallsObject> m_pWallsObject;
 	//CWallsObject* m_pWallsObject = NULL;
+	bool ischange{ false };
+	SceneType s;
 
 #ifdef _WITH_DRAW_AXIS
 	CGameObject* m_pWorldAxis = NULL;
@@ -34,10 +36,10 @@ public:
 
 	virtual void Animate(float fElapsedTime);
 	virtual void Render(HDC hDCFrameBuffer, CCamera* pCamera);
-
+	virtual bool IsChangeSceneRequested() const;
+	virtual SceneType GetNextSceneName() const;
 	virtual void OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam);
 	virtual void OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam);
-
 	CGameObject* PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera);
 };
 

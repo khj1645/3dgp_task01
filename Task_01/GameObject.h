@@ -27,6 +27,7 @@ public:
 
 	XMFLOAT3					m_xmf3RotationAxis = XMFLOAT3(0.0f, 1.0f, 0.0f);
 	float						m_fRotationSpeed = 0.0f;
+	int							typenum{ -1 };
 
 public:
 	void SetActive(bool bActive) { m_bActive = bActive; }
@@ -53,6 +54,7 @@ public:
 	void Move(XMFLOAT3& vDirection, float fSpeed);
 
 	void Rotate(float fPitch = 10.0f, float fYaw = 10.0f, float fRoll = 10.0f);
+	void RotateAround(const XMFLOAT3& center, XMFLOAT3 axis, float angle);
 	void Rotate(XMFLOAT3& xmf3Axis, float fAngle);
 
 	XMFLOAT3 GetPosition();

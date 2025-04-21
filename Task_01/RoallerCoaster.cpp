@@ -83,7 +83,13 @@ void RoallerCoasterScene::ReleaseObjects()
 {
 
 }
-
+bool RoallerCoasterScene::IsChangeSceneRequested() const {
+	return ischange;
+}
+SceneType RoallerCoasterScene::GetNextSceneName() const
+{
+	return s;
+}
 void RoallerCoasterScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
 {
 }
@@ -106,6 +112,15 @@ void RoallerCoasterScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID
 		case '9':
 
 		case 'A':
+		
+		case 'N':
+			ischange = true;
+			s = SceneType::Tank;
+			break;
+		case VK_ESCAPE:
+			ischange = true;
+			s = SceneType::Start;
+			break;
 		default:
 			break;
 		}
@@ -192,6 +207,10 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 	}*/
 	//for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Animate(fElapsedTime);
 	index++;
+	if (index >= 801) {
+		//ischange = true;
+		s = SceneType::Tank;
+	}
 	int nin = min(800, index);
 	XMFLOAT3 pos = m_PathPoints[index];
 	m_ppObjects[0]->SetPosition(m_PathPoints[nin].x, m_PathPoints[nin].y, m_PathPoints[nin].z);

@@ -1,18 +1,55 @@
 #include "stdafx.h"
 #include "SceneManager.h"
 
-void CSceneManager::ChangeScene(std::shared_ptr<CSceneBase> newScene, SceneType type) {
+void CSceneManager::ChangeScene(SceneType type) {
     if (m_pCurrentScene) {
         m_pCurrentScene->ReleaseObjects();
         m_pCurrentScene.reset();
+        m_pPlayer->Reset();
     }
-    m_pCurrentScene = std::move(newScene);
-    m_CurrentSceneType = type;
-    if (m_pCurrentScene) m_pCurrentScene->BuildObjects();
+    switch (type)
+    {
+    case SceneType::Start:
+        m_pPlayer->GetCamera()->Reset();
+        m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
+        m_pCurrentScene = std::make_unique<StartScene>(m_pPlayer);
+        m_CurrentSceneType = SceneType::Start;
+        break;
+
+    case SceneType::Roller:
+        m_pPlayer->GetCamera()->Reset();
+        m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
+        m_pCurrentScene = std::make_unique<RoallerCoasterScene>(m_pPlayer);
+        m_CurrentSceneType = SceneType::Roller;
+        break;
+
+    case SceneType::Tank:
+        m_pPlayer->GetCamera()->Reset();
+        m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
+        m_pCurrentScene = std::make_unique<TankCScene>(m_pPlayer);
+        m_CurrentSceneType = SceneType::Tank;
+        break;
+
+    case SceneType::Title:
+        m_pPlayer->GetCamera()->Reset();
+        m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
+        m_pCurrentScene = std::make_unique<TitleScene>(m_pPlayer);
+        m_CurrentSceneType = SceneType::Title;
+        break;
+    }
+
+    // »õ ¾À ÃÊ±âÈ­
+    if (m_pCurrentScene)
+        m_pCurrentScene->BuildObjects();
 }
 
 void CSceneManager::Update(float dt) {
     if (m_pCurrentScene) m_pCurrentScene->Animate(dt);
+    if (m_pCurrentScene->IsChangeSceneRequested())
+    {
+        SceneType s = m_pCurrentScene->GetNextSceneName();
+        ChangeScene(s);
+    }
 }
 
 void CSceneManager::Render(HDC hDC, CCamera* pCamera) {
@@ -22,11 +59,8 @@ void CSceneManager::Render(HDC hDC, CCamera* pCamera) {
 void CSceneManager::HandleInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     if (!m_pCurrentScene) return;
     if (msg == WM_KEYDOWN || msg == WM_KEYUP) {
-        if (wParam == 'N') {
-            auto newScene = std::make_shared<TankCScene>(m_pPlayer);
-            ChangeScene(newScene, SceneType::Tank);
-        }
-        else m_pCurrentScene->OnProcessingKeyboardMessage(hWnd, msg, wParam, lParam);
+        
+        m_pCurrentScene->OnProcessingKeyboardMessage(hWnd, msg, wParam, lParam);
     }
     else if (msg == WM_MOUSEMOVE || msg == WM_LBUTTONDOWN || msg == WM_RBUTTONDOWN)
         m_pCurrentScene->OnProcessingMouseMessage(hWnd, msg, wParam, lParam);

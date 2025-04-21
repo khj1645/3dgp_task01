@@ -11,6 +11,7 @@ void CViewport::SetViewport(int nLeft, int nTop, int nWidth, int nHeight)
 	m_nTop = nTop; 
 	m_nWidth = nWidth; 
 	m_nHeight = nHeight; 
+
 }
 
 CCamera::CCamera()
@@ -92,7 +93,19 @@ bool CCamera::IsInFrustum(BoundingOrientedBox& xmBoundingBox)
 {
 	return(m_xmFrustumWorld.Intersects(xmBoundingBox));
 }
+void CCamera::Reset()
+{
+	m_xmf3Position = XMFLOAT3(0.0f, 0.0f, 0.0f);
+	m_xmf3Right = XMFLOAT3(1.0f, 0.0f, 0.0f);
+	m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
+	m_xmf3Look = XMFLOAT3(0.0f, 0.0f, 1.0f);
+	
+	SetViewport(0, 0, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT);
+	GeneratePerspectiveProjectionMatrix(1.01f, 500.0f, 60.0f);
+	SetFOVAngle(60.0f);
 
+	GenerateOrthographicProjectionMatrix(1.01f, 50.0f, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT);
+}
 void CCamera::Move(XMFLOAT3& xmf3Shift)
 {
 	m_xmf3Position = Vector3::Add(m_xmf3Position, xmf3Shift);

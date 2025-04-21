@@ -14,6 +14,7 @@ public:
 
 private:
 	std::unique_ptr<CWallsObject> m_pWallsObject;
+	bool ischange{ false };
 	//CWallsObject* m_pWallsObject = NULL;
 
 #ifdef _WITH_DRAW_AXIS
@@ -28,7 +29,8 @@ public:
 	void CheckObjectByWallCollisions();
 	void CheckPlayerByWallCollision();
 	void CheckObjectByBulletCollisions();
-
+	virtual bool IsChangeSceneRequested() const;
+	virtual SceneType GetNextSceneName() const;
 	virtual void Animate(float fElapsedTime);
 	virtual void Render(HDC hDCFrameBuffer, CCamera* pCamera);
 
