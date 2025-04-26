@@ -17,9 +17,9 @@ void CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	m_hInstance = hInstance;
 	m_hWnd = hMainWnd;
 
-	BuildFrameBuffer(); 
+	BuildFrameBuffer();
 
-	BuildObjects(); 
+	BuildObjects();
 
 	_tcscpy_s(m_pszFrameRate, _T("LabProject ("));
 }
@@ -38,12 +38,12 @@ void CGameFramework::BuildFrameBuffer()
 
 	HDC hDC = ::GetDC(m_hWnd);
 
-    m_hDCFrameBuffer = ::CreateCompatibleDC(hDC);
+	m_hDCFrameBuffer = ::CreateCompatibleDC(hDC);
 	m_hBitmapFrameBuffer = ::CreateCompatibleBitmap(hDC, m_rcClient.right - m_rcClient.left, m_rcClient.bottom - m_rcClient.top);
-    ::SelectObject(m_hDCFrameBuffer, m_hBitmapFrameBuffer);
+	::SelectObject(m_hDCFrameBuffer, m_hBitmapFrameBuffer);
 
 	::ReleaseDC(m_hWnd, hDC);
-    ::SetBkMode(m_hDCFrameBuffer, TRANSPARENT);
+	::SetBkMode(m_hDCFrameBuffer, TRANSPARENT);
 }
 
 void CGameFramework::ClearFrameBuffer(DWORD dwColor)
@@ -60,10 +60,10 @@ void CGameFramework::ClearFrameBuffer(DWORD dwColor)
 }
 
 void CGameFramework::PresentFrameBuffer()
-{    
-    HDC hDC = ::GetDC(m_hWnd);
-    ::BitBlt(hDC, m_rcClient.left, m_rcClient.top, m_rcClient.right - m_rcClient.left, m_rcClient.bottom - m_rcClient.top, m_hDCFrameBuffer, m_rcClient.left, m_rcClient.top, SRCCOPY);
-    ::ReleaseDC(m_hWnd, hDC);
+{
+	HDC hDC = ::GetDC(m_hWnd);
+	::BitBlt(hDC, m_rcClient.left, m_rcClient.top, m_rcClient.right - m_rcClient.left, m_rcClient.bottom - m_rcClient.top, m_hDCFrameBuffer, m_rcClient.left, m_rcClient.top, SRCCOPY);
+	::ReleaseDC(m_hWnd, hDC);
 }
 
 void CGameFramework::BuildObjects()
@@ -75,9 +75,13 @@ void CGameFramework::BuildObjects()
 
 	pCamera->GenerateOrthographicProjectionMatrix(1.01f, 50.0f, FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT);
 
-//CAirplaneMesh* pAirplaneMesh = new CAirplaneMesh(6.0f, 6.0f, 1.0f);
+	//CAirplaneMesh* pAirplaneMesh = new CAirplaneMesh(6.0f, 6.0f, 1.0f);
 	std::shared_ptr<CMesh> pAirplaneMesh = std::make_shared<CTankMesh>(6.0f, 6.0f, 1.0f);
-	m_pPlayer = new CAirplanePlayer();
+	m_pPlayer = new CTankPlayer();
+	m_pPlayer->m_xmf3Right = XMFLOAT3(1.0f, 0.0f, 0.0f);
+	m_pPlayer->m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
+	m_pPlayer->m_xmf3Look = XMFLOAT3(0.0f, 0.0f, 1.0f);
+	m_pPlayer->OnUpdateTransform();
 	m_pPlayer->SetPosition(0.0f, 0.0f, 0.0f);
 	m_pPlayer->SetMesh(pAirplaneMesh);
 	m_pPlayer->SetColor(RGB(0, 0, 255));
@@ -87,7 +91,7 @@ void CGameFramework::BuildObjects()
 	auto tankScene = std::make_shared<TitleScene>(m_pPlayer);
 	std::shared_ptr<CSceneBase> baseScene = std::static_pointer_cast<CSceneBase>(tankScene);
 	m_SceneManager.ChangeScene(SceneType::Title);
-	//m_SceneManager.BuildObjects();
+	m_SceneManager.BuildObjects();
 	//m_pScene = new CScene(m_pPlayer);
 	//m_pScene->BuildObjects();
 }
@@ -152,7 +156,7 @@ void CGameFramework::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPA
 			break;
 		case VK_CONTROL:
 			if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank) {
-				((CAirplanePlayer*)m_pPlayer)->FireBullet(m_pLockedObject);
+				((CTankPlayer*)m_pPlayer)->FireBullet(m_pLockedObject);
 				m_pLockedObject = NULL;
 			}
 			break;
@@ -223,31 +227,32 @@ void CGameFramework::ProcessInput()
 			if (cxMouseDelta || cyMouseDelta)
 			{
 				if (pKeyBuffer[VK_RBUTTON] & 0xF0)
-					m_pPlayer->Rotate(cyMouseDelta, 0.0f, -cxMouseDelta);
+					m_pPlayer->Rotate(0, 0.0f, -cxMouseDelta);
 				else
-					m_pPlayer->Rotate(cyMouseDelta, cxMouseDelta, 0.0f);
+					m_pPlayer->Rotate(0, cxMouseDelta, 0.0f);
 			}
 		}
-
+		m_pPlayer->prpos = m_pPlayer->GetPosition();
 		m_pPlayer->Update(m_GameTimer.GetTimeElapsed());
 	}
 }
 
 void CGameFramework::AnimateObjects()
 {
+	//m_pPlayer->prpos = m_pPlayer->GetPosition();
 	float fTimeElapsed = m_GameTimer.GetTimeElapsed();
-	if (m_pPlayer && m_SceneManager.GetCurrentSceneType() == SceneType::Tank ) m_pPlayer->Animate(fTimeElapsed);
+	if (m_pPlayer) m_pPlayer->Animate(fTimeElapsed);
 	m_SceneManager.Update(fTimeElapsed);
 }
 
 void CGameFramework::FrameAdvance()
-{    
+{
 	m_GameTimer.Tick(60.0f);
 	ProcessInput();
 
 	AnimateObjects();
 
-    ClearFrameBuffer(RGB(255, 255, 255));
+	ClearFrameBuffer(RGB(255, 255, 255));
 
 	CCamera* pCamera = m_pPlayer->GetCamera();
 	m_SceneManager.Render(m_hDCFrameBuffer, pCamera);

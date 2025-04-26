@@ -169,6 +169,10 @@ void StartScene::BuildObjects()
 		{40, 1, 0},
 		{40, 0, 0}, {41, 0, 0}, {42, 0, 0},{43,0,0},
 
+		{46,7,0},{46,6,0},{46,5,0},{46,4,0},{46,3,0},
+	{45,2,0}, { 46,2,0 },{ 47,2,0 },
+	{45,6.5,0}
+
 	};
 	std::vector<XMFLOAT3> level2 = {
 		{1, 9, 0},
@@ -230,7 +234,15 @@ void StartScene::BuildObjects()
 		{17, 2, 0}, {17, 3, 0}, {17, 4, 0},
 		{17, 5, 0}, {17, 6, 0}, {17, 7, 0}, {17, 8, 0}, {17, 9, 0},
 
-		{12, 3, 0}, {13, 4, 0}, {14, 5, 0},{15, 6,0}, { 16, 8, 0 }
+		{12, 3, 0}, {13, 4, 0}, {14, 5, 0},{15, 6,0}, { 16, 8, 0 },
+
+		{23, 9, 0}, {24, 9, 0},
+
+		{23, 6, 0}, {23, 5, 0}, {23, 4, 0}, {23, 3, 0},
+
+		{23, 2, 0}, {24, 2, 0},
+
+		{25, 6, 0}, {25, 5, 0}, {25, 4, 0}, {25, 3, 0},
 		
 	};
 	float scale = 0.6f;
@@ -452,7 +464,7 @@ void StartScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 	//m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 
-	//if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
+	if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
 
 	//UI
 #ifdef _WITH_DRAW_AXIS

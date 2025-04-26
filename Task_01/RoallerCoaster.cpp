@@ -214,6 +214,7 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 	int nin = min(800, index);
 	XMFLOAT3 pos = m_PathPoints[index];
 	m_ppObjects[0]->SetPosition(m_PathPoints[nin].x, m_PathPoints[nin].y, m_PathPoints[nin].z);
+	m_pPlayer->SetPosition(m_PathPoints[nin].x, m_PathPoints[nin].y, m_PathPoints[nin].z);
 
 	CheckPlayerByWallCollision();
 
@@ -232,7 +233,7 @@ void RoallerCoasterScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 	//m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 
-	//if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
+    //if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
 
 	//UI
 #ifdef _WITH_DRAW_AXIS

@@ -24,6 +24,7 @@ void CSceneManager::ChangeScene(SceneType type) {
         break;
 
     case SceneType::Tank:
+        m_pPlayer->SetPosition(0.0f, -45.0f, 0.0f);
         m_pPlayer->GetCamera()->Reset();
         m_pPlayer->SetCameraOffset(XMFLOAT3(0.0f, 5.0f, -15.0f));
         m_pCurrentScene = std::make_unique<TankCScene>(m_pPlayer);

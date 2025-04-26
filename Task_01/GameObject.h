@@ -11,7 +11,7 @@ public:
 
 public:
 	bool						m_bActive = true;
-
+	bool						m_bIsObstacle = false;
 	// CMesh*						m_pMesh = NULL;
 	std::shared_ptr<CMesh>		m_pMesh = nullptr;
 	XMFLOAT4X4					m_xmf4x4World = Matrix4x4::Identity();
@@ -76,7 +76,24 @@ public:
 	void GenerateRayForPicking(XMVECTOR& xmvPickPosition, XMMATRIX& xmmtxView, XMVECTOR& xmvPickRayOrigin, XMVECTOR& xmvPickRayDirection);
 	int PickObjectByRayIntersection(XMVECTOR& xmPickPosition, XMMATRIX& xmmtxView, float* pfHitDistance);
 };
+class CObstacleObject : public CGameObject
+{
+public:
+	int m_nHP = 5; // 기본 체력 5
 
+	CObstacleObject() { m_bIsObstacle = true; }
+	virtual ~CObstacleObject() {}
+
+	void Damage()
+	{
+		if (m_nHP > 0) m_nHP--;
+	}
+
+	bool IsDestroyed() const
+	{
+		return m_nHP <= 0;
+	}
+};
 class CExplosiveObject : public CGameObject
 {
 public:

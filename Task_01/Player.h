@@ -11,6 +11,7 @@ public:
 
 public:
 	XMFLOAT3					m_xmf3Position = XMFLOAT3(0.0f, 0.0f, 0.0f);
+
 	XMFLOAT3					m_xmf3Right = XMFLOAT3(1.0f, 0.0f, 0.0f);
 	XMFLOAT3					m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
 	XMFLOAT3					m_xmf3Look = XMFLOAT3(0.0f, 0.0f, 1.0f);
@@ -24,13 +25,14 @@ public:
 	float           			m_fYaw = 0.0f;
 	float           			m_fRoll = 0.0f;
 
-	CCamera*					m_pCamera = NULL;
+	CCamera* m_pCamera = NULL;
 
 public:
 	void SetPosition(float x, float y, float z);
 	void SetPosition(XMFLOAT3&);
+	XMFLOAT3 GetPosition() const;
 	void SetRotation(float x, float y, float z);
-
+	XMFLOAT3					prpos = XMFLOAT3(0.0f, 0.0f, 0.0f);
 	void LookAt(XMFLOAT3& xmf3LookAt, XMFLOAT3& xmf3Up);
 
 	void Move(DWORD dwDirection, float fDistance);
@@ -40,7 +42,19 @@ public:
 	void Rotate(float fPitch = 0.0f, float fYaw = 0.0f, float fRoll = 0.0f);
 
 	void SetCameraOffset(XMFLOAT3& xmf3CameraOffset);
+	void ResetTransform()
+	{
+		m_xmf4x4World = Matrix4x4::Identity();
+		m_xmf3Position = XMFLOAT3(0.0f, 0.0f, 0.0f);
 
+		m_xmf3Right = XMFLOAT3(1.0f, 0.0f, 0.0f);
+		m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
+		m_xmf3Look = XMFLOAT3(0.0f, 0.0f, 1.0f);
+
+		m_xmf3RotationAxis = XMFLOAT3(0.0f, 1.0f, 0.0f);
+		m_fRotationSpeed = 0.0f;
+		m_fMovingSpeed = 0.0f;
+	}
 	void Update(float fTimeElapsed = 0.016f);
 	void Reset();
 	virtual void OnUpdateTransform();
@@ -60,7 +74,7 @@ public:
 	virtual ~CAirplanePlayer();
 
 	float						m_fBulletEffectiveRange = 150.0f;
-	CBulletObject*				m_ppBullets[BULLETS];
+	CBulletObject* m_ppBullets[BULLETS];
 
 	void FireBullet(CGameObject* pLockedObject);
 

@@ -28,6 +28,7 @@ public:
 	void CheckObjectByObjectCollisions();
 	void CheckObjectByWallCollisions();
 	void CheckPlayerByWallCollision();
+	void CheckPlayerByObstacleCollision();
 	void CheckObjectByBulletCollisions();
 	virtual bool IsChangeSceneRequested() const;
 	virtual SceneType GetNextSceneName() const;
