@@ -72,7 +72,7 @@ void RoallerCoasterScene::BuildObjects()
 	cube->SetPosition(-10, 0, 0);
 	m_ppObjects.push_back(std::move(cube));
 	auto smc = std::make_shared<CCubeMesh>(0.2f, 0.2f, 0.2f);
-	for (size_t i = 0; i < m_PathPoints.size(); i += 4)
+	for (size_t i = 0; i < m_PathPoints.size(); i += 10)
 	{
 		const auto& pos = m_PathPoints[i];
 
@@ -194,20 +194,14 @@ XMFLOAT3 Lerp(const XMFLOAT3& a, const XMFLOAT3& b, float t)
 }
 void RoallerCoasterScene::Animate(float fElapsedTime)
 {
-	const float fSpeed = 500.f; // 이동 속도 (수정가능)
+	const float fSpeed = 200.f; // 이동 속도 (수정가능)
 	m_pPlayer->m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
 	m_fElapsedTime += fSpeed * fElapsedTime;
 
-	if (m_fElapsedTime >= 1.0f)
+	while (m_fElapsedTime >= 1.0f)
 	{
-		m_fElapsedTime = 0.0f;
-		index++;
-
-		// 경로 끝나면 루프
-		if (index >= static_cast<int>(m_PathPoints.size()) - 1)
-		{
-			index = 0;
-		}
+		m_fElapsedTime -= 1.0f;
+		index = (index + 1) % (m_PathPoints.size() - 1);
 	}
 
 	// pos0 -> pos1 보간
@@ -216,7 +210,7 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 
 	XMFLOAT3 newPos = Lerp(pos0, pos1, m_fElapsedTime);
 	m_pPlayer->SetPosition(newPos);
-	m_ppObjects[0]->SetPosition(newPos);
+	//m_ppObjects[0]->SetPosition(newPos);
 
 	// 항상 +X 바라보게
 	m_pPlayer->m_xmf3Look = XMFLOAT3(1.0f, 0.0f, 0.0f);
@@ -228,12 +222,14 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 	// 카메라 업데이트
 	XMFLOAT3 camTarget = m_pPlayer->GetPosition();
 
-	// 플레이어 위치에서 +Y 방향으로 Offset
-	XMFLOAT3 camPos =
-		XMFLOAT3(0.0f, 0.0f, 0.0f); // Y축으로 30만큼 위로 올림
+	XMFLOAT3 camPos = XMFLOAT3(
+		camTarget.x - 20.0f, // X축 뒤로 (왼쪽에서 바라보게)
+		camTarget.y, // Y축 위로
+		camTarget.z - 20.0f  // Z축 뒤로 (뒤쪽에서 바라보게)
+	);
 
-	// 카메라가 내려다보게 (camPos → camTarget 바라봄)
-	m_pPlayer->GetCamera()->SetLookAt(camPos, camTarget, XMFLOAT3(0.0f, 1.0f, 0.0f)); // 위를 z+ 로!
+	// 카메라는 (camPos → camTarget) 방향을 본다
+	m_pPlayer->GetCamera()->SetLookAt(camPos, camTarget, XMFLOAT3(0.0f, 1.0f, 0.0f));
 	m_pPlayer->GetCamera()->GenerateViewMatrix();
 
 	m_pPlayer->Animate(fElapsedTime);
