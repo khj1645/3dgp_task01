@@ -130,7 +130,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[9]->SetRotationSpeed(90.06f);
 	m_ppObjects[9]->SetMovingDirection(XMFLOAT3(-0.0f, 0.0f, -1.0f));
 	m_ppObjects[9]->SetMovingSpeed(15.0f);
-	std::shared_ptr<CMesh> pObstacleMesh = std::make_shared<CCubeMesh>(15.0f,8.0f, 15.0f);
+	std::shared_ptr<CMesh> pObstacleMesh = std::make_shared<CCubeMesh>(40.0f,8.0f, 40.0f);
 	float fMinX = -45.0f;
 	float fMaxX = 45.0f;
 	float fMinZ = 50.0f;   // 플레이어(z=0)보다 충분히 앞에 배치
@@ -247,27 +247,59 @@ CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 	}
 	return(pNearestObject);
 }
+XMFLOAT3 GetCollisionNormal(const BoundingOrientedBox& movingBox, const BoundingOrientedBox& obstacleBox)
+{
+	XMFLOAT3 normal = { 0.0f, 0.0f, 0.0f };
 
+	if (movingBox.Center.x > obstacleBox.Center.x) normal.x = 1.0f;
+	else normal.x = -1.0f;
+
+	if (movingBox.Center.z > obstacleBox.Center.z) normal.z = 1.0f;
+	else normal.z = -1.0f;
+
+	return normal;
+}
 void TankCScene::CheckObjectByObjectCollisions()
 {
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->m_pObjectCollided = NULL;
 
 	for (int i = 0; i < m_ppObjects.size(); i++)
 	{
-		if (m_ppObjects[i]->m_bIsObstacle) continue; // ✅ 장애물은 무시
-
 		for (int j = (i + 1); j < m_ppObjects.size(); j++)
 		{
-			if (m_ppObjects[j]->m_bIsObstacle) continue; // ✅ 장애물은 무시
-
 			if (m_ppObjects[i]->m_xmOOBB.Intersects(m_ppObjects[j]->m_xmOOBB))
 			{
-				m_ppObjects[i]->m_pObjectCollided = m_ppObjects[j].get();
-				m_ppObjects[j]->m_pObjectCollided = m_ppObjects[i].get();
+				// 둘 중 하나라도 장애물이면
+				if (dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()) || dynamic_cast<CObstacleObject*>(m_ppObjects[j].get()))
+				{
+					// 장애물은 가만히 있고, 일반 오브젝트만 튕겨나감
+
+					CGameObject* pMovingObject = dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()) ? m_ppObjects[j].get() : m_ppObjects[i].get();
+
+					// 장애물로부터 법선 벡터를 계산
+					XMFLOAT3 normal = { 0.0f, 0.0f, 0.0f };
+					if (dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()))
+						normal = GetCollisionNormal(pMovingObject->m_xmOOBB, m_ppObjects[i]->m_xmOOBB);
+					else
+						normal = GetCollisionNormal(pMovingObject->m_xmOOBB, m_ppObjects[j]->m_xmOOBB);
+
+					XMVECTOR xmvNormal = XMVector3Normalize(XMLoadFloat3(&normal));
+					XMVECTOR xmvMoveDir = XMLoadFloat3(&pMovingObject->m_xmf3MovingDirection);
+
+					XMVECTOR xmvReflected = XMVector3Reflect(xmvMoveDir, xmvNormal);
+					XMStoreFloat3(&pMovingObject->m_xmf3MovingDirection, xmvReflected);
+				}
+				else
+				{
+					// 둘 다 일반 오브젝트이면 기존처럼 방향, 속도 스왑
+					m_ppObjects[i]->m_pObjectCollided = m_ppObjects[j].get();
+					m_ppObjects[j]->m_pObjectCollided = m_ppObjects[i].get();
+				}
 			}
 		}
 	}
 
+	// 속도 교환
 	for (int i = 0; i < m_ppObjects.size(); i++)
 	{
 		if (m_ppObjects[i]->m_pObjectCollided)

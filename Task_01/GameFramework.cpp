@@ -201,7 +201,7 @@ LRESULT CALLBACK CGameFramework::OnProcessingWindowMessage(HWND hWnd, UINT nMess
 
 void CGameFramework::ProcessInput()
 {
-	if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank || m_SceneManager.GetCurrentSceneType() == SceneType::Roller) {
+	if (m_SceneManager.GetCurrentSceneType() == SceneType::Tank) {
 		static UCHAR pKeyBuffer[256];
 		if (GetKeyboardState(pKeyBuffer))
 		{

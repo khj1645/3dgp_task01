@@ -20,7 +20,7 @@ void CPlayer::SetPosition(float x, float y, float z)
 }
 void CPlayer::SetPosition(XMFLOAT3& pos)
 {
-
+	m_xmf3Position = pos;
 	CGameObject::SetPosition(pos);
 }
 XMFLOAT3 CPlayer::GetPosition() const
@@ -34,7 +34,10 @@ void CPlayer::SetCameraOffset(XMFLOAT3& xmf3CameraOffset)
 	m_pCamera->SetLookAt(Vector3::Add(m_xmf3Position, m_xmf3CameraOffset), m_xmf3Position, m_xmf3Up);
 	m_pCamera->GenerateViewMatrix();
 }
-
+XMFLOAT3 CPlayer::GetCameraOffset()
+{
+	return m_xmf3CameraOffset;
+}
 void CPlayer::Move(DWORD dwDirection, float fDistance)
 {
 	if (dwDirection)

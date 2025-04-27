@@ -42,6 +42,14 @@ public:
 	void Rotate(float fPitch = 0.0f, float fYaw = 0.0f, float fRoll = 0.0f);
 
 	void SetCameraOffset(XMFLOAT3& xmf3CameraOffset);
+	XMFLOAT3 GetCameraOffset();
+	void CPlayer::SetOrientation(const XMFLOAT3& right, const XMFLOAT3& up, const XMFLOAT3& look)
+	{
+		m_xmf3Right = right;
+		m_xmf3Up = up;
+		m_xmf3Look = look;
+		OnUpdateTransform();
+	}
 	void ResetTransform()
 	{
 		m_xmf4x4World = Matrix4x4::Identity();
