@@ -143,6 +143,8 @@ void TitleScene::BuildObjects()
 		cube->SetPosition(x, y, z);
 		m_ppObjects.push_back(std::move(cube));
 	}
+	for (int i=0;i<74;++i)
+		m_ppObjects[i]->typenum = 1;
 	for (const XMFLOAT3& pos : letter_3) {
 		float x = (pos.x - 20);
 		float y = pos.y - 20;
@@ -217,16 +219,18 @@ CGameObject* TitleScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 			pNearestObject = m_ppObjects[i].get();
 		}
 	}
-	m_ppObjects.clear();
-	CExplosiveObject::PrepareExplosion();
-	auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
-	auto explo = std::make_unique<CExplosiveObject>();
-	explo->SetMesh(cubeMesh);
-	explo->SetColor(RGB(255, 0, 0));
-	explo->SetPosition(-4.5f, 0.9f, 20.0f);
-	explo->m_bBlowingUp = true;
-	isboom = true;
-	m_ppObjects.push_back(std::move(explo));
+	if (pNearestObject != nullptr && pNearestObject->typenum == 1) {
+		m_ppObjects.clear();
+		CExplosiveObject::PrepareExplosion();
+		auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
+		auto explo = std::make_unique<CExplosiveObject>();
+		explo->SetMesh(cubeMesh);
+		explo->SetColor(RGB(255, 0, 0));
+		explo->SetPosition(-4.5f, 0.9f, 20.0f);
+		explo->m_bBlowingUp = true;
+		isboom = true;
+		m_ppObjects.push_back(std::move(explo));
+	}
 	return(pNearestObject);
 }
 

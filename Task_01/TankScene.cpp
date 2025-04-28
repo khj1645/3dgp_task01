@@ -44,7 +44,8 @@ void TankCScene::BuildObjects()
 	m_ppObjects[0] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[0]->SetMesh(pCubeMesh);
 	m_ppObjects[0]->SetColor(RGB(255, 0, 0));
-	m_ppObjects[0]->SetPosition(-13.5f, -45.0f, -14.0f);
+	m_ppObjects[0]->SetPosition(-13.5f, -45.0f, 14.0f);
+	m_ppObjects[0]->SetPosition(-13.5f, -45.0f, 14.0f);
 	//m_ppObjects[0]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 1.0f));
 	m_ppObjects[0]->SetRotationSpeed(90.0f);
 	m_ppObjects[0]->SetMovingDirection(XMFLOAT3(1.0f, 0.0f, 0.0f));
@@ -53,7 +54,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[1] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[1]->SetMesh(pCubeMesh);
 	m_ppObjects[1]->SetColor(RGB(0, 0, 255));
-	m_ppObjects[1]->SetPosition(+13.5f, -45.0f, -14.0f);
+	m_ppObjects[1]->SetPosition(+13.5f, -45.0f, 10.0f);
 	//m_ppObjects[1]->SetRotationAxis(XMFLOAT3(1.0f, 1.0f, 0.0f));
 	m_ppObjects[1]->SetRotationSpeed(180.0f);
 	m_ppObjects[1]->SetMovingDirection(XMFLOAT3(-1.0f, 0.0f, 0.0f));
@@ -89,7 +90,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[5] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[5]->SetMesh(pCubeMesh);
 	m_ppObjects[5]->SetColor(RGB(255, 0, 255));
-	m_ppObjects[5]->SetPosition(-10.0f, -45.0f, -10.0f);
+	m_ppObjects[5]->SetPosition(-10.0f, -45.0f, 10.0f);
 	//m_ppObjects[5]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
 	m_ppObjects[5]->SetRotationSpeed(60.06f);
 	m_ppObjects[5]->SetMovingDirection(XMFLOAT3(1.0f, 0.0f, 1.0f));
@@ -98,7 +99,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[6] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[6]->SetMesh(pCubeMesh);
 	m_ppObjects[6]->SetColor(RGB(255, 0, 255));
-	m_ppObjects[6]->SetPosition(-10.0f, -45.0f, -10.0f);
+	m_ppObjects[6]->SetPosition(-10.0f, -45.0f, 5.0f);
 	//m_ppObjects[6]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
 	m_ppObjects[6]->SetRotationSpeed(60.06f);
 	m_ppObjects[6]->SetMovingDirection(XMFLOAT3(1.0f, 0.0f, 1.0f));
@@ -107,7 +108,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[7] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[7]->SetMesh(pCubeMesh);
 	m_ppObjects[7]->SetColor(RGB(255, 0, 128));
-	m_ppObjects[7]->SetPosition(-10.0f, -45.0f, -20.0f);
+	m_ppObjects[7]->SetPosition(-10.0f, -45.0f, 20.0f);
 	//m_ppObjects[7]->SetRotationAxis(XMFLOAT3(0.0f, 1.0f, 0.0f));
 	m_ppObjects[7]->SetRotationSpeed(70.06f);
 	m_ppObjects[7]->SetMovingDirection(XMFLOAT3(-1.0f, 0.0f, 1.0f));
@@ -116,7 +117,7 @@ void TankCScene::BuildObjects()
 	m_ppObjects[8] = std::make_unique<CExplosiveObject>();
 	m_ppObjects[8]->SetMesh(pCubeMesh);
 	m_ppObjects[8]->SetColor(RGB(128, 0, 255));
-	m_ppObjects[8]->SetPosition(-15.0f, -45.0f, -30.0f);
+	m_ppObjects[8]->SetPosition(-15.0f, -45.0f, 30.0f);
 	//m_ppObjects[8]->SetRotationAxis(XMFLOAT3(1.0f, 1.0f, 0.0f));
 	m_ppObjects[8]->SetRotationSpeed(90.06f);
 	m_ppObjects[8]->SetMovingDirection(XMFLOAT3(0.0f, 0.0f, -1.0f));
@@ -130,7 +131,9 @@ void TankCScene::BuildObjects()
 	m_ppObjects[9]->SetRotationSpeed(90.06f);
 	m_ppObjects[9]->SetMovingDirection(XMFLOAT3(-0.0f, 0.0f, -1.0f));
 	m_ppObjects[9]->SetMovingSpeed(15.0f);
-	std::shared_ptr<CMesh> pObstacleMesh = std::make_shared<CCubeMesh>(40.0f,8.0f, 40.0f);
+	for (int i = 0; i < 10; ++i)
+		m_ppObjects[i]->typenum = 1;
+	std::shared_ptr<CMesh> pObstacleMesh = std::make_shared<CCubeMesh>(20.0f,8.0f, 20.0f);
 	float fMinX = -45.0f;
 	float fMaxX = 45.0f;
 	float fMinZ = 50.0f;   // 플레이어(z=0)보다 충분히 앞에 배치
@@ -140,7 +143,7 @@ void TankCScene::BuildObjects()
 	for (int i = 0; i < 7; i++) {
 		auto obstacle = std::make_unique<CObstacleObject>();
 		obstacle->SetMesh(pObstacleMesh);
-		obstacle->SetColor(RGB(128, 128, 128));
+		obstacle->SetColor(RGB(0, 0, 255));
 		// x는 자유롭게 랜덤
 		float x = fMinX + static_cast<float>(rand()) / RAND_MAX * (fMaxX - fMinX);
 		// z는 항상 50 ~ 200 사이
@@ -211,6 +214,9 @@ void TankCScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 				pExplosiveObject->m_bBlowingUp = true;
 			}
 			break;
+		case 'W':
+			killcount = 10;
+			break;
 		case VK_ESCAPE:
 			ischange = true;
 			break;
@@ -239,7 +245,7 @@ CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 	{
 		float fHitDistance = FLT_MAX;
 		nIntersected = m_ppObjects[i]->PickObjectByRayIntersection(xmvPickPosition, xmmtxView, &fHitDistance);
-		if ((nIntersected > 0) && (fHitDistance < fNearestHitDistance))
+		if ((nIntersected > 0) && (fHitDistance < fNearestHitDistance) && (m_ppObjects[i]->typenum == 1))
 		{
 			fNearestHitDistance = fHitDistance;
 			pNearestObject = m_ppObjects[i].get();
@@ -272,11 +278,9 @@ void TankCScene::CheckObjectByObjectCollisions()
 				// 둘 중 하나라도 장애물이면
 				if (dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()) || dynamic_cast<CObstacleObject*>(m_ppObjects[j].get()))
 				{
-					// 장애물은 가만히 있고, 일반 오브젝트만 튕겨나감
 
 					CGameObject* pMovingObject = dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()) ? m_ppObjects[j].get() : m_ppObjects[i].get();
 
-					// 장애물로부터 법선 벡터를 계산
 					XMFLOAT3 normal = { 0.0f, 0.0f, 0.0f };
 					if (dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()))
 						normal = GetCollisionNormal(pMovingObject->m_xmOOBB, m_ppObjects[i]->m_xmOOBB);
@@ -291,15 +295,12 @@ void TankCScene::CheckObjectByObjectCollisions()
 				}
 				else
 				{
-					// 둘 다 일반 오브젝트이면 기존처럼 방향, 속도 스왑
 					m_ppObjects[i]->m_pObjectCollided = m_ppObjects[j].get();
 					m_ppObjects[j]->m_pObjectCollided = m_ppObjects[i].get();
 				}
 			}
 		}
 	}
-
-	// 속도 교환
 	for (int i = 0; i < m_ppObjects.size(); i++)
 	{
 		if (m_ppObjects[i]->m_pObjectCollided)
@@ -441,14 +442,17 @@ void TankCScene::CheckObjectByBulletCollisions()
 				{
 					// 폭발 오브젝트일 경우
 					CExplosiveObject* pExplosiveObject = static_cast<CExplosiveObject*>(m_ppObjects[i].get());
+					if (pExplosiveObject->m_bBlowingUp == false)	++killcount;
 					pExplosiveObject->m_bBlowingUp = true;
 					ppBullets[j]->Reset();
+
 				}
 			}
 		}
 
-		if (bDestroyed)
-			m_ppObjects.erase(m_ppObjects.begin() + i); // 장애물 삭제
+		if (bDestroyed) {
+			m_ppObjects.erase(m_ppObjects.begin() + i);
+		}
 		else
 			++i;
 	}
@@ -456,6 +460,7 @@ void TankCScene::CheckObjectByBulletCollisions()
 
 void TankCScene::Animate(float fElapsedTime)
 {
+
 	m_pWallsObject->Animate(fElapsedTime);
 
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Animate(fElapsedTime);
@@ -475,13 +480,107 @@ void TankCScene::Animate(float fElapsedTime)
 			return (pExplosive && !pExplosive->m_bActive); // 폭발 끝나면 삭제
 		});
 	m_ppObjects.erase(it, m_ppObjects.end());
-}
+	if (killcount >= 10 && !win) {
+		win = true;
+		auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
 
+		// 각각 글자별 큐브 좌표
+		std::map<char, std::vector<XMFLOAT3>> letterCoords = {
+	{'Y', { {0,6,0},{1,5,0},{2,4,0},{3,3,0},{4,4,0},{5,5,0},{6,6,0},{3,2,0},{3,1,0},{3,0,0} }},
+	{'O', { {0,6,0},{1,6,0},{2,6,0},{3,6,0},{4,6,0},{5,6,0},{6,6,0},
+			{0,5,0},{6,5,0},
+			{0,4,0},{6,4,0},
+			{0,3,0},{6,3,0},
+			{0,2,0},{6,2,0},
+			{0,1,0},{6,1,0},
+			{0,0,0},{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0},{6,0,0} }},
+	{'U', { {0,6,0},{6,6,0},
+			{0,5,0},{6,5,0},
+			{0,4,0},{6,4,0},
+			{0,3,0},{6,3,0},
+			{0,2,0},{6,2,0},
+			{0,1,0},{6,1,0},
+			{1,0,0},{2,0,0},{3,0,0},{4,0,0},{5,0,0}}},
+	{'W', {
+			{0,6,0},{6,6,0},
+			{0,5,0},{6,5,0},
+			{0,4,0},{6,4,0},
+			{1,3,0},{5,3,0},
+			{2,2,0},{4,2,0},
+			{2,1,0},{4,1,0},
+			{3,0,0},
+
+			{-3,6,0},{3,6,0},
+			{-3,5,0},{3,5,0},
+			{-3,4,0},{3,4,0},
+			{-2,3,0},{2,3,0},
+			{-1,2,0},{1,2,0},
+			{-1,1,0},{1,1,0},
+			{0,0,0}
+		}},
+	{'I', { {0,6,0},{1,6,0},{2,6,0},
+			{1,5,0},
+			{1,4,0},
+			{1,3,0},
+			{1,2,0},
+			{1,1,0},
+			{0,0,0},{1,0,0},{2,0,0}}},
+	{'N', { {0,6,0},{6,6,0},
+			{0,5,0},{1,5,0},{6,5,0},
+			{0,4,0},{2,4,0},{6,4,0},
+			{0,3,0},{3,3,0},{6,3,0},
+			{0,2,0},{4,2,0},{6,2,0},
+			{0,1,0},{5,1,0},{6,1,0},
+			{0,0,0},{6,0,0}}},
+	{'!', { {3,6,0},
+			{3,5,0},
+			{3,4,0},
+			{3,2,0},
+			{3,0,0}}}
+		};
+
+		// 출력할 문장
+		std::string text = "YOU WIN!";
+
+		// 기준점 잡기
+		XMFLOAT3 playerPos = m_pPlayer->GetPosition();
+		float baseX = playerPos.x - 15.0f; // 좌우 중심 맞추기용
+		float baseY = playerPos.y + 5.0f;   // y를 낮게 (15 → 5)
+		float baseZ = playerPos.z + 30.0f;  // 플레이어 앞쪽
+
+		const float spacing = 6.0f; // 글자 간 간격 (조절가능)
+
+		int letterIndex = 0;
+		for (char c : text)
+		{
+			if (c == ' ') { letterIndex++; continue; } // 공백 건너뜀
+
+			auto& coords = letterCoords[c];
+
+			for (const auto& pos : coords)
+			{
+				auto letterObj = std::make_unique<CGameObject>();
+				letterObj->SetMesh(cubeMesh);
+
+				float x = baseX + letterIndex * spacing + pos.x * 0.6f;
+				float y = baseY + pos.y * 0.6f;
+				float z = baseZ + pos.z * 0.6f;
+				letterObj->SetPosition(x, y, z);
+
+				m_ppObjects.push_back(std::move(letterObj));
+			}
+			letterIndex++;
+		}
+
+	}
+}
 void TankCScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 {
 	CGraphicsPipeline::SetViewport(&pCamera->m_Viewport);
 
 	CGraphicsPipeline::SetViewPerspectiveProjectTransform(&pCamera->m_xmf4x4ViewPerspectiveProject);
+
+	
 	m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 

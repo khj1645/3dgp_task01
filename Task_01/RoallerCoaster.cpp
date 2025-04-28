@@ -30,37 +30,41 @@ XMFLOAT3 CatmullRom(const XMFLOAT3& p0, const XMFLOAT3& p1, const XMFLOAT3& p2, 
 void RoallerCoasterScene::BuildObjects()
 {
 	std::vector<XMFLOAT3> controlPoints = {
-			{ -20,  0,   0 },
-			{ -15,  5,   5 },
-			{ -10, 10,   0 },
-			{  -5, 15,  -5 },
-			{   0, 20,   0 },
-			{   5, 15,  10 },
-			{  10, 10,   0 },
-			{  15,  5,  -10 },
-			{  20,  0,   0 },
-			{  25, -5,  10 },
-			{  30, -10,  0 },
-			{  35, -5, -10 },
-			{  40,  0,   0 },
-			{  45,  5,  10 },
-			{  50, 10,   0 },
-			{  55, 15, -10 },
-			{  60, 20,   0 },
-			{  65, 15,  10 },
-			{  70, 10,   0 },
-			{  75,  5, -10 },
-			{  80,  0,   0 }
+		{0, 0, 50},    // 시작 - Z+ 방향
+		{30, 10, 30},
+		{50, 20, 0},
+		{30, 30, -30},
+		{0, 40, -50},  // 반바퀴
+		{-30, 30, -30},
+		{-50, 20, 0},
+		{-30, 10, 30},
+		{0, 0, 50},    // 제자리 복귀
+
+		// 두 번째 레벨 (Z축 아래로 나선형)
+		{0, -10, 80},
+		{40, -20, 40},
+		{80, -30, 0},
+		{40, -40, -40},
+		{0, -50, -80},
+		{-40, -40, -40},
+		{-80, -30, 0},
+		{-40, -20, 40},
+		{0, -10, 80},
+
+		// 마지막 스프린트
+		{0, 0, 100},
+		{50, 10, 100},
+		{100, 20, 50},
+		{100, 30, 0}
 	};
 
-	// ★ 곡선을 더 부드럽게
 	for (size_t i = 0; i + 3 < controlPoints.size(); ++i) {
 		XMFLOAT3 p0 = controlPoints[i];
 		XMFLOAT3 p1 = controlPoints[i + 1];
 		XMFLOAT3 p2 = controlPoints[i + 2];
 		XMFLOAT3 p3 = controlPoints[i + 3];
 
-		for (float t = 0.0f; t <= 1.0f; t += 0.005f) { // 아주 촘촘하게
+		for (float t = 0.0f; t <= 1.0f; t += 0.005f) {
 			m_PathPoints.push_back(CatmullRom(p0, p1, p2, p3, t));
 		}
 	}
@@ -143,27 +147,7 @@ void RoallerCoasterScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID
 
 CGameObject* RoallerCoasterScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera)
 {
-	XMFLOAT3 xmf3PickPosition;
-	xmf3PickPosition.x = (((2.0f * xClient) / (float)pCamera->m_Viewport.m_nWidth) - 1) / pCamera->m_xmf4x4PerspectiveProject._11;
-	xmf3PickPosition.y = -(((2.0f * yClient) / (float)pCamera->m_Viewport.m_nHeight) - 1) / pCamera->m_xmf4x4PerspectiveProject._22;
-	xmf3PickPosition.z = 1.0f;
-
-	XMVECTOR xmvPickPosition = XMLoadFloat3(&xmf3PickPosition);
-	XMMATRIX xmmtxView = XMLoadFloat4x4(&pCamera->m_xmf4x4View);
-
-	int nIntersected = 0;
-	float fNearestHitDistance = FLT_MAX;
 	CGameObject* pNearestObject = NULL;
-	for (int i = 0; i < m_ppObjects.size(); i++)
-	{
-		float fHitDistance = FLT_MAX;
-		nIntersected = m_ppObjects[i]->PickObjectByRayIntersection(xmvPickPosition, xmmtxView, &fHitDistance);
-		if ((nIntersected > 0) && (fHitDistance < fNearestHitDistance))
-		{
-			fNearestHitDistance = fHitDistance;
-			pNearestObject = m_ppObjects[i].get();
-		}
-	}
 	return(pNearestObject);
 }
 
@@ -194,14 +178,23 @@ XMFLOAT3 Lerp(const XMFLOAT3& a, const XMFLOAT3& b, float t)
 }
 void RoallerCoasterScene::Animate(float fElapsedTime)
 {
-	const float fSpeed = 200.f; // 이동 속도 (수정가능)
+	const float fSpeed = 250.f; // 이동 속도 (수정가능)
 	m_pPlayer->m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
 	m_fElapsedTime += fSpeed * fElapsedTime;
 
 	while (m_fElapsedTime >= 1.0f)
 	{
 		m_fElapsedTime -= 1.0f;
-		index = (index + 1) % (m_PathPoints.size() - 1);
+		index = (index + 1);
+
+		// ✅ 경로 끝에 도달하면 Scene 전환 요청
+		if (index >= m_PathPoints.size() - 1)
+		{
+			index = m_PathPoints.size() - 2; // 안전하게 고정
+			ischange = true;
+			s = SceneType::Tank;
+			return; // 더 진행할 필요 없으니 바로 리턴
+		}
 	}
 
 	// pos0 -> pos1 보간
@@ -210,7 +203,7 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 
 	XMFLOAT3 newPos = Lerp(pos0, pos1, m_fElapsedTime);
 	m_pPlayer->SetPosition(newPos);
-	//m_ppObjects[0]->SetPosition(newPos);
+	m_ppObjects[0]->SetPosition(newPos);
 
 	// 항상 +X 바라보게
 	m_pPlayer->m_xmf3Look = XMFLOAT3(1.0f, 0.0f, 0.0f);
@@ -223,12 +216,11 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 	XMFLOAT3 camTarget = m_pPlayer->GetPosition();
 
 	XMFLOAT3 camPos = XMFLOAT3(
-		camTarget.x - 20.0f, // X축 뒤로 (왼쪽에서 바라보게)
-		camTarget.y, // Y축 위로
-		camTarget.z - 20.0f  // Z축 뒤로 (뒤쪽에서 바라보게)
+		camTarget.x - 20.0f,
+		camTarget.y,
+		camTarget.z - 20.0f
 	);
 
-	// 카메라는 (camPos → camTarget) 방향을 본다
 	m_pPlayer->GetCamera()->SetLookAt(camPos, camTarget, XMFLOAT3(0.0f, 1.0f, 0.0f));
 	m_pPlayer->GetCamera()->GenerateViewMatrix();
 
@@ -243,7 +235,7 @@ void RoallerCoasterScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 	//m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 
-   if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
+  // if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
 	
 	//UI
 #ifdef _WITH_DRAW_AXIS
