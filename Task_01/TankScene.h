@@ -19,6 +19,8 @@ private:
 	bool win{ false };
 	std::unique_ptr<CWallsObject> m_pWallsObject;
 	bool ischange{ false };
+	bool iscol{ true };
+	bool isaim{ false };
 	//CWallsObject* m_pWallsObject = NULL;
 
 #ifdef _WITH_DRAW_AXIS

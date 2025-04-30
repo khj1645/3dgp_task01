@@ -208,13 +208,22 @@ void TankCScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 			break;
 		}
 		case 'A':
-			for (int i = 0; i < m_ppObjects.size(); i++)
-			{
-				CExplosiveObject* pExplosiveObject = static_cast<CExplosiveObject*>(m_ppObjects[i].get());
-				pExplosiveObject->m_bBlowingUp = true;
-			}
+			if (!isaim) isaim = true;
+			else isaim = false;
+			break;
+		case 'S':
+			if (!iscol) iscol = true;
+			else iscol = false;
 			break;
 		case 'W':
+			for (int i = 0; i < m_ppObjects.size(); ++i)
+			{
+				CExplosiveObject* pExplosiveObject = static_cast<CExplosiveObject*>(m_ppObjects[i].get());
+				if (pExplosiveObject->m_bBlowingUp == false)	++killcount;
+				pExplosiveObject->m_bBlowingUp = true;
+
+			}
+
 			killcount = 10;
 			break;
 		case VK_ESCAPE:
@@ -230,6 +239,7 @@ void TankCScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM 
 }
 CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCamera* pCamera)
 {
+	
 	XMFLOAT3 xmf3PickPosition;
 	xmf3PickPosition.x = (((2.0f * xClient) / (float)pCamera->m_Viewport.m_nWidth) - 1) / pCamera->m_xmf4x4PerspectiveProject._11;
 	xmf3PickPosition.y = -(((2.0f * yClient) / (float)pCamera->m_Viewport.m_nHeight) - 1) / pCamera->m_xmf4x4PerspectiveProject._22;
@@ -240,7 +250,7 @@ CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 
 	int nIntersected = 0;
 	float fNearestHitDistance = FLT_MAX;
-	CGameObject* pNearestObject = NULL;
+	CGameObject* pNearestObject = nullptr;
 	for (int i = 0; i < m_ppObjects.size(); i++)
 	{
 		float fHitDistance = FLT_MAX;
@@ -250,6 +260,10 @@ CGameObject* TankCScene::PickObjectPointedByCursor(int xClient, int yClient, CCa
 			fNearestHitDistance = fHitDistance;
 			pNearestObject = m_ppObjects[i].get();
 		}
+	}
+	if (pNearestObject != nullptr) {
+		((CTankPlayer*)m_pPlayer)->FireBullet(pNearestObject);
+		pNearestObject = nullptr;
 	}
 	return(pNearestObject);
 }
@@ -371,18 +385,29 @@ void TankCScene::CheckObjectByWallCollisions()
 }
 void TankCScene::CheckPlayerByObstacleCollision()
 {
-	BoundingOrientedBox playerOOBB = m_pPlayer->m_xmOOBB;
+	if (iscol) {
+		BoundingOrientedBox playerOOBB = m_pPlayer->m_xmOOBB;
 
-	for (const auto& obj : m_ppObjects)
-	{
-		if (dynamic_cast<CObstacleObject*>(obj.get()))
+		for (const auto& obj : m_ppObjects)
 		{
-			if (playerOOBB.Intersects(obj->m_xmOOBB))
+			if (dynamic_cast<CObstacleObject*>(obj.get()))
 			{
-				m_pPlayer->SetPosition(m_pPlayer->prpos.x, m_pPlayer->prpos.y, m_pPlayer->prpos.z);
+				if (playerOOBB.Intersects(obj->m_xmOOBB))
+				{
+					m_pPlayer->SetPosition(m_pPlayer->prpos.x, m_pPlayer->prpos.y, m_pPlayer->prpos.z);
 
-				m_pPlayer->m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
-				break;
+					m_pPlayer->m_xmf3Velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
+					break;
+				}
+			}
+			if (dynamic_cast<CExplosiveObject*>(obj.get()))
+			{
+				if (playerOOBB.Intersects(obj->m_xmOOBB))
+				{
+					m_pPlayer->SetPosition(0,-45,0);
+
+					break;
+				}
 			}
 		}
 	}
@@ -429,13 +454,15 @@ void TankCScene::CheckObjectByBulletCollisions()
 				// 장애물일 경우
 				if (CObstacleObject* pObstacle = dynamic_cast<CObstacleObject*>(m_ppObjects[i].get()))
 				{
-					pObstacle->Damage();
-					ppBullets[j]->Reset();
+					if (iscol) {
+						pObstacle->Damage();
+						ppBullets[j]->Reset();
 
-					if (pObstacle->IsDestroyed())
-					{
-						bDestroyed = true;
-						break; // 장애물 죽으면 바로 삭제
+						if (pObstacle->IsDestroyed())
+						{
+							bDestroyed = true;
+							break; // 장애물 죽으면 바로 삭제
+						}
 					}
 				}
 				else

@@ -464,7 +464,7 @@ void StartScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 	//m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 
-	if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
+	//if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
 
 	//UI
 #ifdef _WITH_DRAW_AXIS

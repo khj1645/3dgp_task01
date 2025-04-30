@@ -340,12 +340,12 @@ void CTankPlayer::FireBullet(CGameObject* pLockedObject)
 	if (pBulletObject)
 	{
 		XMFLOAT3 xmf3Position = GetPosition();
-		XMFLOAT3 xmf3Direction = GetLook(); // ✅ 수정
+		XMFLOAT3 xmf3Direction = GetLook();
 		XMFLOAT3 xmf3FirePosition = Vector3::Add(xmf3Position, Vector3::ScalarProduct(xmf3Direction, 6.0f, false));
 
 		pBulletObject->m_xmf4x4World = m_xmf4x4World;
 		pBulletObject->SetFirePosition(xmf3FirePosition);
-		pBulletObject->SetMovingDirection(xmf3Direction); // ✅ 수정
+		pBulletObject->SetMovingDirection(xmf3Direction);
 		pBulletObject->SetColor(RGB(255, 0, 0));
 		pBulletObject->SetActive(true);
 

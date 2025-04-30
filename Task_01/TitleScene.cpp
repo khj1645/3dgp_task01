@@ -17,10 +17,6 @@ void TitleScene::BuildObjects()
 	auto cubeMesh = std::make_shared<CCubeMesh>(1.0f, 1.0f, 1.0f);
 	auto widthbarMesh = std::make_shared<CCubeMesh>(1.0f, 6.0f, 1.0f);
 	std::map<std::string, std::vector<XMFLOAT3>> word_letter_positions;
-	std::vector<XMFLOAT3> letter_K = {
-	{0, 0, 0}, {0, 1, 0}, {0, 2, 0}, {0, 3, 0}, {0, 4, 0}, {0, 5, 0},
-	{1, 2, 0}, {2, 1, 0}, {2, 3, 0}, {3, 0, 0}, {3, 4, 0}
-	};
 	word_letter_positions["±èÇÑÁØ"] = {
 		  {0, 5, 0}, {1, 5, 0}, {2, 5, 0}, {3, 5, 0}, {4, 5, 0},
 		  {4, 4, 0}, {4, 3, 0}, {4, 2, 0}, {4, 1, 0},		// ¤¡
@@ -276,7 +272,7 @@ void TitleScene::Render(HDC hDCFrameBuffer, CCamera* pCamera)
 	//m_pWallsObject->Render(hDCFrameBuffer, pCamera);
 	for (int i = 0; i < m_ppObjects.size(); i++) m_ppObjects[i]->Render(hDCFrameBuffer, pCamera);
 
-	if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
+	//if (m_pPlayer) m_pPlayer->Render(hDCFrameBuffer, pCamera);
 
 	//UI
 #ifdef _WITH_DRAW_AXIS
