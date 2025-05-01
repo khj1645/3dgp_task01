@@ -29,7 +29,7 @@ XMFLOAT3 CatmullRom(const XMFLOAT3& p0, const XMFLOAT3& p1, const XMFLOAT3& p2, 
 }
 void RoallerCoasterScene::BuildObjects()
 {
-	std::vector<XMFLOAT3> controlPoints = {
+	std::vector<XMVECTOR> controlPoints = {
 		{0, 0, 50},    // 시작 - Z+ 방향
 		{30, 10, 30},
 		{50, 20, 0},
@@ -59,13 +59,13 @@ void RoallerCoasterScene::BuildObjects()
 	};
 
 	for (size_t i = 0; i + 3 < controlPoints.size(); ++i) {
-		XMFLOAT3 p0 = controlPoints[i];
-		XMFLOAT3 p1 = controlPoints[i + 1];
-		XMFLOAT3 p2 = controlPoints[i + 2];
-		XMFLOAT3 p3 = controlPoints[i + 3];
+		XMVECTOR p0 = controlPoints[i];
+		XMVECTOR p1 = controlPoints[i + 1];
+		XMVECTOR p2 = controlPoints[i + 2];
+		XMVECTOR p3 = controlPoints[i + 3];
 
 		for (float t = 0.0f; t <= 1.0f; t += 0.005f) {
-			m_PathPoints.push_back(CatmullRom(p0, p1, p2, p3, t));
+			m_PathPoints.push_back(XMVectorCatmullRom(p0, p1, p2, p3, t));
 		}
 	}
 		
@@ -78,17 +78,18 @@ void RoallerCoasterScene::BuildObjects()
 	auto smc = std::make_shared<CCubeMesh>(0.2f, 0.2f, 0.2f);
 	for (size_t i = 0; i < m_PathPoints.size(); i += 10)
 	{
-		const auto& pos = m_PathPoints[i];
-
+		auto pos = m_PathPoints[i];
+		XMFLOAT3 rpos;
 		auto railObj = std::make_unique<CGameObject>();
 		auto railObj2 = std::make_unique<CGameObject>();
 		railObj->SetMesh(smc);
-		railObj->SetPosition(pos.x, pos.y, pos.z - 2);
+		XMStoreFloat3(&rpos, pos);
+		railObj->SetPosition(rpos.x, rpos.y, rpos.z - 2);
 
 		m_ppObjects.push_back(std::move(railObj));
 
 		railObj2->SetMesh(smc);
-		railObj2->SetPosition(pos.x, pos.y, pos.z + 2);
+		railObj2->SetPosition(rpos.x, rpos.y, rpos.z + 2);
 		m_ppObjects.push_back(std::move(railObj2));
 
 	}
@@ -198,21 +199,19 @@ void RoallerCoasterScene::Animate(float fElapsedTime)
 	}
 
 	// pos0 -> pos1 보간
-	const XMFLOAT3& pos0 = m_PathPoints[index];
-	const XMFLOAT3& pos1 = m_PathPoints[index + 1];
+	const XMVECTOR& pos0 = m_PathPoints[index];
+	const XMVECTOR& pos1 = m_PathPoints[index + 1];
+	XMFLOAT3 newpos;
+	XMStoreFloat3(&newpos,XMVectorLerp(pos0, pos1, m_fElapsedTime));
+	m_pPlayer->SetPosition(newpos);
+	m_ppObjects[0]->SetPosition(newpos);
 
-	XMFLOAT3 newPos = Lerp(pos0, pos1, m_fElapsedTime);
-	m_pPlayer->SetPosition(newPos);
-	m_ppObjects[0]->SetPosition(newPos);
-
-	// 항상 +X 바라보게
 	m_pPlayer->m_xmf3Look = XMFLOAT3(1.0f, 0.0f, 0.0f);
 	m_pPlayer->m_xmf3Up = XMFLOAT3(0.0f, 1.0f, 0.0f);
 	m_pPlayer->m_xmf3Right = Vector3::Normalize(Vector3::CrossProduct(m_pPlayer->m_xmf3Up, m_pPlayer->m_xmf3Look));
 
 	m_pPlayer->OnUpdateTransform();
 
-	// 카메라 업데이트
 	XMFLOAT3 camTarget = m_pPlayer->GetPosition();
 
 	XMFLOAT3 camPos = XMFLOAT3(
